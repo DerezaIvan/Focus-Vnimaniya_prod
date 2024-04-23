@@ -1,0 +1,1183 @@
+@import url(./fonts.css);
+@import url(./hover-mobile.css);
+@import url(./hover-desktop.css);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Prosto One", sans-serif;
+	margin: 0 auto;
+	background: #0b0b09;
+	color: #2e2e2e;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.page {
+	overflow: hidden;
+}
+
+/* Стили для Header */
+
+.header {
+	background-image: url("../images/header-bckg.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	overflow: hidden;
+}
+
+.header__container {
+	max-width: 1780px;
+	margin: 0 auto;
+}
+
+.header__top {
+	padding-top: 70px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 2;
+}
+
+.logo {
+	max-width: 74px;
+	transition: 0.5s;
+}
+
+.menu {
+	display: flex;
+	margin-left: 170px;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu__items {
+	display: flex;
+	gap: 65px;
+}
+
+.menu__items-link {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 24.38px;
+	border-bottom: 3px solid transparent;
+	transition: 0.5s;
+}
+
+.menu__icons {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+}
+.menu__icon.tg svg path,
+.menu__icon.instagram svg,
+.menu__icon.instagram svg path {
+	transition: 0.5s;
+	border-radius: 10px;
+}
+.menu__burger {
+	display: none;
+}
+.menu__burger-button {
+	display: none;
+	cursor: pointer;
+}
+
+.header__content-text {
+	max-width: 1110px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header__title {
+	font-size: 130px;
+	font-weight: 400;
+	line-height: 0.8;
+	text-align: left;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 2;
+	margin-top: 112px;
+	cursor: pointer;
+}
+
+.header__title span {
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
+	color: transparent;
+	letter-spacing: 1em;
+	transition: 0.7s;
+}
+
+.header__subtitle {
+	color: #f4db68;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 50.4px;
+	letter-spacing: 0.04em;
+	text-align: left;
+	text-transform: uppercase;
+	max-width: 542px;
+	margin: 0 auto;
+	padding-top: 66px;
+	position: relative;
+	z-index: 2;
+}
+
+.header__text {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 33.6px;
+	max-width: 542px;
+	margin: 0 auto;
+	padding-top: 167px;
+	position: relative;
+	z-index: 2;
+}
+
+.btn {
+	padding: 30px 36px 30px 36px;
+	border-radius: 0px 50px 0px 50px;
+	font-family: "Prosto One", sans-serif;
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 0.6;
+	text-transform: uppercase;
+	background-color: #ffce00;
+	border: none;
+	max-width: 432px;
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.header__btn {
+	width: 100%;
+	max-width: 542px;
+	margin-bottom: 465px;
+	margin-top: 35px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header__content-image {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.header__image {
+	display: block;
+}
+
+.header__image-adaptive {
+	display: none;
+}
+
+.header__content-image img {
+	position: relative;
+}
+
+.krilova {
+	position: absolute;
+	top: 75%;
+	right: 48%;
+	z-index: 3;
+}
+
+.samoilova {
+	position: absolute;
+	top: 61%;
+	right: 5%;
+	z-index: 3;
+}
+
+.header__content-social-text-title {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 33.6px;
+	color: #f4f4f4;
+}
+
+.header__content-social-text-link {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 24.38px;
+	color: #f4f4f4;
+	padding-top: 7px;
+	transition: 0.5s;
+}
+
+.header__circle img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 1800px;
+}
+
+/* Стили для For */
+
+.for {
+	padding-top: 100px;
+	padding-bottom: 102px;
+}
+
+.for__container {
+	max-width: 1465px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.for__title {
+	font-size: 113px;
+	font-weight: 400;
+	line-height: 135.6px;
+	text-transform: uppercase;
+	color: #f4f4f4;
+	max-width: 450px;
+}
+
+.for__list {
+	display: flex;
+	flex-direction: column;
+	max-width: 725px;
+	row-gap: 70px;
+}
+
+.for__list-item {
+	font-family: "Montserrat", sans-serif;
+	font-size: 36px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 50.4px;
+	text-align: left;
+	text-transform: uppercase;
+	color: #f4f4f4;
+}
+
+.for__list-item span {
+	font-family: "Prosto One", sans-serif;
+	letter-spacing: 0.04em;
+	font-style: normal;
+}
+
+.for__list-item::marker {
+	font-size: 55px;
+	color: #ffce00;
+}
+
+/* Стили для Events */
+
+.events {
+	margin-top: 150px;
+	background-image: url(../images/main-bckg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.events__container {
+	max-width: 1800px;
+}
+.events__top {
+	display: flex;
+}
+
+.events__top-image {
+	position: relative;
+	top: 50px;
+	transform: rotate(-3deg);
+}
+
+.events__top-image-adaptive {
+	display: none;
+}
+
+.events__top-title {
+	font-size: 113px;
+	font-weight: 400;
+	line-height: 135.6px;
+	text-align: left;
+	color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #ffce00;
+	text-transform: uppercase;
+	position: relative;
+	bottom: 100px;
+	max-width: 1168px;
+}
+
+.events__content {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	padding-bottom: 331px;
+}
+
+.events__desc-title {
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 50.4px;
+	letter-spacing: 0.04em;
+	text-align: left;
+	text-transform: uppercase;
+	color: #f4f4f4;
+}
+
+.events__desc-text {
+	font-family: "Montserrat", sans-serif;
+	font-size: 36px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 50.4px;
+	text-transform: uppercase;
+	color: #f4f4f4;
+	max-width: 549px;
+}
+
+.events__desc-date {
+	display: flex;
+	column-gap: 38px;
+	padding-top: 26px;
+}
+
+.events__desc-date-item {
+	display: flex;
+	column-gap: 15px;
+	align-items: center;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 33.6px;
+	text-align: center;
+	color: #f4f4f4;
+}
+
+.events__line-bottom {
+	position: relative;
+	left: 42%;
+	bottom: -30px;
+	max-width: 1000px;
+	transform: rotate(-7deg);
+}
+
+.events__line-bottom-adaptive {
+	display: none;
+}
+
+.content {
+	max-width: 638px;
+	margin-left: 800px;
+}
+
+.content__title {
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 50.4px;
+	letter-spacing: 0.04em;
+	text-align: left;
+	color: #f4f4f4;
+	text-transform: uppercase;
+}
+
+.content__title span {
+	font-family: "Montserrat", sans-serif;
+	font-style: italic;
+}
+
+.content__text {
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+	line-height: 25.2px;
+	max-width: 338px;
+	padding-top: 20px;
+}
+
+.content__link {
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 32.11px;
+	text-transform: uppercase;
+	color: #ffce00;
+	margin-top: 90px;
+	margin-bottom: 80px;
+	padding-bottom: 20px;
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	border-bottom: 1px solid #ffce00;
+	max-width: 310px;
+	transition: 0.5s;
+}
+
+/* Стили для Organizers */
+
+.organizers {
+	padding-top: 170px;
+	margin-bottom: 20px;
+}
+
+.organizers__container {
+	position: relative;
+	overflow: hidden;
+}
+
+.organizers__title {
+	font-weight: 400;
+	font-size: 113px;
+	line-height: 120%;
+	text-transform: uppercase;
+	color: #f4f4f4;
+	max-width: 1110px;
+	margin-left: 70px;
+}
+
+.organizers__info {
+	display: flex;
+	justify-content: center;
+	column-gap: 44px;
+	padding-top: 90px;
+	padding-bottom: 150px;
+}
+
+.organizers__info-content {
+	max-width: 418px;
+}
+
+.organizers__info-title {
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 140%;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #f4f4f4;
+}
+
+.organizers__info-link {
+	display: flex;
+	align-items: center;
+	column-gap: 15px;
+	padding-top: 7px;
+	color: #f4f4f4;
+	font-weight: 500;
+	font-size: 20px;
+	transition: 0.5s;
+}
+
+.organizers__info-list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 24px;
+	padding-top: 75px;
+}
+
+.organizers__info-list-item {
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 21.6px;
+	color: #f4f4f4;
+}
+
+.organizers__info-list-item::marker {
+	color: #ffce00;
+	font-size: 38px;
+}
+
+.organizers__info-list-item span {
+	font-weight: 400;
+}
+
+.end {
+	align-content: end;
+	position: relative;
+	top: 100px;
+	margin-left: 44px;
+}
+
+.organizers__titles-title {
+	color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #ffce00;
+	font-weight: 400;
+	font-size: 113px;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+
+.organizers__titles-title:nth-child(1) {
+	position: absolute;
+	top: 20%;
+	right: 0;
+	z-index: -1;
+}
+
+.organizers__titles-title:nth-child(2) {
+	position: absolute;
+	top: 10%;
+	right: -28%;
+	z-index: -1;
+}
+
+.organizers__titles-title:nth-child(3) {
+	position: absolute;
+	bottom: 6%;
+	left: 6px;
+	z-index: -1;
+}
+
+.organizers__titles-title:nth-child(4) {
+	display: none;
+}
+
+/* Стили для Mission */
+
+.mission {
+	padding-top: 67px;
+	padding-bottom: 190px;
+}
+
+.mission__container {
+	max-width: 1375px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.mission__text {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.mission__text-title {
+	font-weight: 400;
+	font-size: 113px;
+	line-height: 120%;
+	text-transform: uppercase;
+	color: #f4f4f4;
+	max-width: 737px;
+}
+
+.mission__text-desc {
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 140%;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #ffce00;
+	max-width: 540px;
+}
+
+.mission__text-desc span {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 140%;
+	text-transform: none;
+	color: #f4f4f4;
+	padding-top: 22px;
+}
+
+.mission__image {
+	padding-top: 90px;
+}
+
+.mission__content {
+	display: flex;
+	align-items: flex-start;
+	padding-top: 40px;
+}
+
+.mission__content-text {
+	font-family: "Montserrat", sans-serif;
+	font-style: italic;
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 140%;
+	text-transform: uppercase;
+	color: #f4f4f4;
+	max-width: 700px;
+	margin-left: 240px;
+}
+
+.mission__content-text-title span {
+	font-style: normal;
+}
+
+.mission__content-text-list {
+	padding-top: 40px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+.mission__content-text-list-item {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 140%;
+	color: #f4f4f4;
+}
+
+.mission__content-text-list-item::marker {
+	font-size: 55px;
+	color: #ffce00;
+}
+
+.mission__desc {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 140%;
+	color: #f4f4f4;
+	max-width: 709px;
+	align-self: flex-end;
+	padding-top: 77px;
+}
+
+.mission__desc span {
+	color: #ffce00;
+}
+
+/* Стили для Rates */
+
+.rates {
+	padding-top: 144px;
+	height: 1200px;
+	background-image: url(../images/rates-bkcg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.rates__title {
+	font-weight: 400;
+	font-size: 113px;
+	line-height: 120%;
+	text-transform: uppercase;
+	color: #f4f4f4;
+	position: relative;
+	bottom: 120px;
+	margin-left: 51px;
+}
+
+.rates__line {
+	position: absolute;
+	top: 0;
+	right: 33%;
+	transform: rotate(-2deg);
+}
+
+.rates__line-image-adaptive {
+	display: none;
+}
+
+.rates__cards {
+	max-width: 1610px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	column-gap: 230px;
+}
+
+.rates__card {
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.rates__card-title {
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 140%;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #f4f4f4;
+	max-width: 534px;
+	opacity: 0.5;
+	transition: 0.5s;
+}
+
+.rates__card-title.active {
+	color: #ffce00;
+	opacity: 1;
+}
+
+.rates__card-list {
+	font-family: "Montserrat", sans-serif;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	padding-top: 30px;
+	color: #f4f4f4;
+	font-weight: 500;
+	font-size: 20px;
+	opacity: 0.5;
+	transition: 0.5s;
+}
+
+.rates__card-list-item::marker {
+	font-size: 30px;
+	color: #ffce00;
+}
+
+.rates__card-price {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 140%;
+	color: #f4f4f4;
+	opacity: 0.5;
+	padding-top: 45px;
+	transition: 0.5s;
+}
+
+.rates__card-price.active,
+.rates__card-list.active {
+	opacity: 1;
+}
+
+/* Стили для Buttons */
+.buttons {
+	text-align: center;
+	position: relative;
+	bottom: 200px;
+}
+
+.rates__btns {
+	padding-top: 200px;
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.speaker,
+.partner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.speaker__title,
+.partner__title {
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 50.4px;
+	letter-spacing: 0.04em;
+	text-align: left;
+	text-transform: uppercase;
+	color: #f4f4f4;
+}
+
+.speaker__btn,
+.partner__btn {
+	font-family: "Prosto One", sans-serif;
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 32.11px;
+	text-align: center;
+	max-width: 369px;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid;
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+/* Стили для Reviews */
+
+.reviews {
+	padding-top: 50px;
+	padding-bottom: 200px;
+	position: relative;
+}
+
+.reviews__title {
+	color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #ffce00;
+	font-weight: 400;
+	font-size: 113px;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+
+.reviews__title:nth-of-type(1) {
+	position: absolute;
+	top: 0;
+	right: -5%;
+}
+
+.reviews__title:nth-of-type(2) {
+	position: absolute;
+	top: 7%;
+	left: -2%;
+}
+
+.reviews__title:nth-of-type(3) {
+	position: absolute;
+	left: -1%;
+	bottom: 32%;
+}
+
+/* Slider */
+.image-slider__wrapper.swiper-wrapper {
+	align-items: center;
+}
+
+.image-slider__image {
+	text-align: center;
+}
+
+.image-slider__image img {
+	max-width: 100%;
+	filter: blur(5px);
+}
+
+.swiper-slide-active img {
+	filter: none;
+	border-radius: 10px;
+}
+
+.buttons__slide {
+	display: flex;
+	justify-content: center;
+	gap: 55px;
+	padding-top: 136px;
+}
+
+.prev,
+.next {
+	width: 27px;
+	height: 27px;
+	border-radius: 50%;
+	background: #ffce005e;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+/* Стили для Footer */
+
+.footer {
+	padding-top: 200px;
+	padding-bottom: 60px;
+	background-image: url(../images/footer-bckg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	font-size: 18px;
+	font-family: "Montserrat", sans-serif;
+}
+
+.footer__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1780px;
+	margin: 0 auto;
+}
+
+.footer__text {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.footer__text a {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 21.6px;
+	text-decoration: underline;
+}
+
+.footer__logo {
+	text-align: center;
+}
+
+.footer__content {
+	max-width: 300px;
+}
+
+.footer__content-icons {
+	display: flex;
+	justify-content: flex-end;
+	gap: 32px;
+}
+
+.footer__icon svg {
+	transition: 0.5s;
+	border-radius: 10px;
+}
+
+.footer__content-text {
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 15.6px;
+	text-align: right;
+	color: #d1d1d1;
+	padding-top: 12px;
+}
+
+.form__partner {
+	position: fixed;
+	z-index: -5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.form__partner.active {
+	opacity: 1;
+	z-index: 5;
+}
+
+/* Стили для модального окна */
+.form__partner .container {
+	background-color: #151514;
+	padding: 63px 80px;
+	position: relative;
+	height: 100svh;
+	overflow-y: auto;
+}
+
+.form__partner-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.form__partner {
+	color: #f4f4f4;
+	background: #151514d6;
+}
+
+.form__partner-title {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 33.6px;
+	text-align: left;
+	max-width: 410px;
+}
+
+.form__partner-form {
+	padding-top: 40px;
+	max-width: 476px;
+}
+
+.form__partner-form-input {
+	margin-top: 25px;
+	padding: 10px 20px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.2;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #f4f4f4;
+	color: #eee8cb;
+	transition: 0.5s;
+}
+
+.checkboxs {
+	padding-top: 60px;
+	max-width: 510px;
+}
+
+.involvement {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+.checkbox {
+	display: flex;
+	column-gap: 15px;
+	align-items: flex-start;
+	font-family: "Montserrat", sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+.agreement-checkbox .checkbox label span {
+	text-decoration: underline;
+}
+
+.agreement-checkbox {
+	padding-top: 70px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+
+.form__partner-text {
+	color: #d1d1d1;
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.agreement-checkbox .checkbox {
+	color: #d1d1d1;
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 21.6px;
+}
+
+.form__partner-btn {
+	margin-top: 60px;
+}
+
+.close__form {
+	background: transparent;
+	border: none;
+	position: absolute;
+	top: 35px;
+	right: 35px;
+	cursor: pointer;
+}
+
+.message__error {
+	display: none;
+	color: #da1d03;
+	font-size: 16px;
+	padding-top: 10px;
+}
+
+/* Стили для кругов */
+
+.involvement .checkbox input[type="radio"] {
+	display: none;
+}
+
+.involvement .checkbox label {
+	position: relative;
+	padding-left: 25px;
+	cursor: pointer;
+}
+
+.involvement .checkbox label::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 2px;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	border: 2px solid #ffce00; /* цвет обводки по умолчанию */
+}
+
+.involvement .checkbox input[type="radio"]:checked + label::before {
+	border-color: #ffce00; /* оранжевая обводка при выборе */
+}
+
+.involvement .checkbox label::after {
+	content: "";
+	position: absolute;
+	left: 3px;
+	top: 5px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #ffce00;
+	transform: rotate(45deg);
+	display: none;
+}
+
+.involvement .checkbox input[type="radio"]:checked + label::after {
+	display: block;
+}
+
+.checkbox input[type="radio"]:checked + label::before {
+	background-color: #ffce00; /* Изменяем цвет заливки на желтый при выборе */
+}
+
+/* Стили для чекбоксов */
+
+.checkbox input[type="checkbox"] {
+	display: none;
+}
+
+/* Оформление кастомного чекбокса */
+.checkbox input[type="checkbox"] + label {
+	position: relative;
+	padding-left: 40px;
+	cursor: pointer;
+}
+
+/* Оформление фона кастомного чекбокса */
+.checkbox input[type="checkbox"] + label:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #d1d1d1;
+	border-radius: 4px;
+}
+
+/* Оформление галочки внутри кастомного чекбокса */
+.checkbox input[type="checkbox"]:checked + label:before {
+	background-color: #ffce00;
+	border: 2px solid #ffce00;
+}
+
+.checkbox input[type="checkbox"]:checked + label:after {
+	content: "\2713";
+	font-size: 16px;
+	color: white;
+	position: absolute;
+	top: 2px;
+	left: 4px;
+}
+
+/* Стили для инпутов */
+*/ .checkbox input[type="checkbox"]:checked + label::before {
+	background-color: #ffce00; /* Изменяем цвет заливки на желтый при выборе */
+}
+
+.form__partner-form-input:focus {
+	outline: none;
+	border-bottom-color: #ffce00;
+	color: #ffce00;
+}
+
+.form__partner-form-input:invalid {
+	border-bottom-color: #da1d03;
+	color: #da1d03;
+}
+
+.form__partner-form-input:valid {
+	background: transparent;
+}

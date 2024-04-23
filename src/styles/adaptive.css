@@ -1,0 +1,1018 @@
+/* 1920px - 1440px */
+@media screen and (max-width: 1900px) {
+	.header__container,
+	.for__container,
+	.events__container,
+	.organizers__container,
+	.mission__container,
+	.rates__container,
+	.buttons,
+	.reviews__container,
+	.footer__container {
+		padding: 0 20px;
+	}
+	.header__content-image img {
+		max-width: 890px;
+	}
+
+	.header__circle img {
+		max-width: 1000px;
+	}
+
+	.header__btn {
+		margin-bottom: 200px;
+	}
+
+	.header__title {
+		font-size: 115px;
+	}
+
+	.header__subtitle,
+	.header__text,
+	.header__btn {
+		margin-left: 150px;
+	}
+
+	.events__top-title {
+		font-size: 70px;
+		line-height: 1.2;
+	}
+	.events__top-image {
+		max-width: 700px;
+	}
+
+	.rates__cards {
+		column-gap: 100px;
+		justify-content: space-around;
+	}
+}
+
+/* 1440px - 1024px */
+@media screen and (max-width: 1439px) {
+	.header {
+		background-size: cover;
+		background-position: center;
+	}
+
+	.header__circle img {
+		max-width: 1000px;
+	}
+
+	.header__content-image img {
+		max-width: 630px;
+	}
+
+	.header__title {
+		font-size: 64px;
+	}
+
+	.header__subtitle {
+		font-size: 22px;
+		line-height: 1.3;
+		max-width: 330px;
+	}
+
+	.header__subtitle,
+	.header__text,
+	.header__btn {
+		margin-left: 80px;
+	}
+
+	.header__content-social-text-title {
+		font-size: 18px;
+		max-width: 137px;
+		max-width: 100px;
+	}
+
+	.header__content-social-text-link {
+		font-size: 14px;
+		padding-top: 0;
+	}
+
+	.header__text {
+		padding-top: 139px;
+	}
+
+	.header__btn {
+		max-width: 392px;
+		margin-bottom: 100px;
+	}
+
+	.btn {
+		font-size: 22px;
+		line-height: 1.2;
+	}
+
+	.samoilova {
+		top: 59%;
+		right: 5%;
+	}
+
+	.krilova {
+		top: 79%;
+		right: 30%;
+	}
+
+	.for__title {
+		font-size: 80px;
+		max-width: 400px;
+	}
+
+	.for__list {
+		max-width: 500px;
+	}
+
+	.for__list-item {
+		font-size: 25px;
+		line-height: 1.3;
+	}
+	.events {
+		background-size: contain;
+	}
+
+	.events__top-image {
+		max-width: 400px;
+		left: -20px;
+		top: 20px;
+	}
+
+	.events__top-title {
+		font-size: 50px;
+		bottom: 50px;
+	}
+
+	.events__content {
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 0;
+		row-gap: 170px;
+	}
+
+	.events__desc-title,
+	.events__desc-text {
+		font-size: 25px;
+		line-height: 1.2;
+	}
+
+	.events__line-bottom {
+		left: 37%;
+		bottom: 164px;
+		transform: none;
+	}
+
+	.events__line-bottom img {
+		max-width: 517px;
+	}
+
+	.content {
+		margin: 0 auto;
+	}
+
+	.organizers__title {
+		font-size: 80px;
+	}
+
+	.organizers__info {
+		column-gap: 0;
+	}
+
+	.organizers__titles-title {
+		font-size: 70px;
+	}
+
+	.organizers__info img {
+		max-width: 300px;
+		object-fit: contain;
+	}
+
+	.organizers__info-content {
+		max-width: 280px;
+	}
+
+	.organizers__info-title {
+		font-size: 25px;
+	}
+
+	.organizers__info-list {
+		padding-top: 50px;
+		row-gap: 12px;
+		max-width: 250px;
+	}
+
+	.organizers__info-list-item {
+		font-size: 14px;
+	}
+
+	.organizers__titles-title:nth-child(1) {
+		top: 15%;
+	}
+
+	.mission {
+		padding-bottom: 150px;
+	}
+
+	.mission__text {
+		justify-content: space-around;
+	}
+
+	.mission__text-title {
+		font-size: 70px;
+		max-width: 300px;
+	}
+
+	.mission__text-desc {
+		font-size: 30px;
+		max-width: 450px;
+	}
+
+	.mission__text-desc span {
+		font-size: 20px;
+	}
+
+	.mission__content {
+		justify-content: space-between;
+	}
+
+	.mission__content-text {
+		max-width: 400px;
+		margin-left: 0;
+	}
+
+	.rates {
+		background-image: url(../images/rates-bkcg-adaptive.png);
+	}
+
+	.rates__title {
+		font-size: 70px;
+	}
+
+	.rates__cards {
+		flex-wrap: wrap;
+		row-gap: 50px;
+		column-gap: 100px;
+		justify-content: space-around;
+	}
+
+	.rates__line {
+		top: 1%;
+		right: 20%;
+		transform: rotate(1deg);
+	}
+
+	.rates__line img {
+		max-width: 450px;
+	}
+
+	.buttons {
+		bottom: 0;
+		padding-top: 67px;
+		text-align: left;
+	}
+
+	.reviews__title {
+		font-size: 70px;
+	}
+
+	.reviews__title:nth-of-type(2) {
+		left: 0;
+		right: -18%;
+		top: 5%;
+	}
+}
+/* 1023px */
+
+@media screen and (max-width: 1024px) {
+	.organizers__titles-title:nth-child(3) {
+		bottom: 10%;
+	}
+}
+
+/* 1023px - 768px */
+@media screen and (max-width: 1023px) {
+	.header__title,
+	.header__subtitle,
+	.krilova,
+	.samoilova,
+	.btn,
+	.header__text {
+		z-index: 1;
+	}
+
+	/* Бургер меню */
+
+	.hamburger-menu {
+		display: none;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		max-width: 450px;
+		width: 100%;
+		right: 0;
+		background-color: #f4f4f4;
+		padding: 80px;
+		border-radius: 10px 0;
+		border-radius: 0 0 100px 100px;
+	}
+
+	.hamburger-menu.active {
+		display: flex;
+	}
+
+	.hamburger__menu-btn-close {
+		display: none;
+		cursor: pointer;
+	}
+
+	.hamburger__menu-btn {
+		cursor: pointer;
+	}
+
+	.hamburger__menu-btn-close.active {
+		display: block;
+		position: absolute;
+		top: 30px;
+		max-width: 20px;
+	}
+
+	.menu__items {
+		flex-direction: column;
+		gap: 22px;
+	}
+
+	.menu__icons {
+		padding-top: 22px;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.menu__burger {
+		display: block;
+	}
+
+	.header__top {
+		padding-top: 30px;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.header__title {
+		margin-top: 60px;
+		font-size: 54px;
+	}
+
+	.header__circle img {
+		top: -20%;
+		left: -47%;
+		max-width: 1275px;
+		height: 1274px;
+	}
+
+	.header__content-image img {
+		max-width: 500px;
+	}
+
+	.header__subtitle,
+	.header__text,
+	.header__btn {
+		margin-left: 0;
+	}
+
+	.header__subtitle {
+		padding-top: 29px;
+	}
+
+	.header__content-social-text-title {
+		font-size: 14px;
+		line-height: 1.2;
+	}
+
+	.header__content-social-text-link {
+		font-size: 11px;
+	}
+
+	.header__text {
+		font-size: 17px;
+		line-height: 1.2;
+		max-width: 289px;
+	}
+
+	.for__title,
+	.events__top-title,
+	.organizers__title,
+	.organizers__titles-title,
+	.mission__text-title,
+	.rates__title,
+	.reviews__title {
+		font-size: 40px;
+		line-height: 1.2;
+	}
+
+	.for__title {
+		max-width: 160px;
+	}
+	.for__container {
+		justify-content: space-around;
+	}
+	.for__list {
+		max-width: 376px;
+		font-size: 22px;
+		line-height: 1.2;
+	}
+
+	.events__top-image {
+		max-width: 300px;
+	}
+
+	.events__desc-title,
+	.events__desc-text {
+		font-size: 22px;
+		max-width: 405px;
+		margin: 0 auto;
+	}
+
+	.events__desc-date-item {
+		font-size: 17px;
+	}
+
+	.events__line-bottom {
+		left: 30%;
+		bottom: 215px;
+	}
+
+	.content {
+		max-width: 388px;
+		margin-left: 238px;
+	}
+
+	.content__title {
+		font-size: 22px;
+		line-height: 1.2;
+	}
+
+	.organizers__title {
+		margin-left: 0;
+	}
+
+	.organizers__info-content {
+		max-width: 200px;
+	}
+	.organizers__info-title {
+		font-size: 22px;
+	}
+
+	.organizers__info-link {
+		font-size: 14px;
+	}
+
+	.organizers__info-list-item {
+		font-size: 12px;
+	}
+
+	.organizers__info img {
+		max-width: 238px;
+	}
+
+	.organizers__titles-title:nth-child(3) {
+		bottom: 12%;
+	}
+
+	.mission__text-desc {
+		font-size: 22px;
+	}
+
+	.mission__text-desc span {
+		font-size: 17px;
+	}
+
+	.mission__content {
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: flex-end;
+		row-gap: 22px;
+	}
+
+	.mission__content-text {
+		align-self: center;
+	}
+
+	.mission__desc {
+		padding-top: 60px;
+		font-size: 17px;
+		max-width: 572px;
+		margin-left: 155px;
+		align-self: normal;
+	}
+
+	.rates {
+		height: auto;
+	}
+
+	.rates__card-title {
+		font-size: 22px;
+	}
+
+	.rates__card {
+		max-width: 385px;
+	}
+
+	.rates__card-list {
+		font-size: 14px;
+	}
+
+	.speaker__title,
+	.partner__title,
+	.speaker__btn,
+	.partner__btn {
+		font-size: 22px;
+	}
+
+	.rates__btns {
+		padding-top: 150px;
+	}
+
+	.footer {
+		background-image: url("../images/footer-bckg-adaptive.png");
+	}
+	.footer__container {
+		flex-direction: column-reverse;
+		row-gap: 62px;
+	}
+
+	.footer__content-icons {
+		justify-content: center;
+	}
+
+	.footer__content-text {
+		text-align: center;
+	}
+
+	.footer__text {
+		align-items: center;
+	}
+}
+
+/* 767px - 375px  */
+
+@media screen and (max-width: 767px) {
+	.header__title,
+	.header__title span {
+		max-width: 342px;
+		font-size: 40px;
+	}
+
+	.header__circle img {
+		top: 0;
+		left: 0%;
+		max-width: 1000px;
+		height: 635px;
+	}
+
+	.header__content-image {
+		position: relative;
+		max-width: 500px;
+		height: 600px;
+		object-fit: cover;
+		left: -50px;
+	}
+
+	.header__image-adaptive {
+		max-width: 400px;
+		left: -20px;
+		bottom: 100px;
+	}
+
+	.header__title {
+		order: 1;
+	}
+
+	.header__subtitle {
+		order: 2;
+		font-size: 18px;
+	}
+
+	.header__content-image {
+		order: 3;
+	}
+
+	.header__text {
+		order: 4;
+	}
+
+	.header__btn {
+		order: 5;
+	}
+
+	.btn {
+		width: 100%;
+		font-size: 16px;
+		padding: 20px 36px;
+	}
+
+	.samoilova {
+		top: 23%;
+		right: 30%;
+	}
+
+	.krilova {
+		top: 70%;
+		right: -15%;
+	}
+
+	.header__content-social-text-title {
+		font-size: 12px;
+	}
+
+	.header__text {
+		padding-top: 0;
+	}
+
+	.for__container {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.for__title {
+		max-width: 100%;
+		font-size: 27px;
+	}
+
+	.for__list {
+		max-width: 220px;
+		align-self: flex-end;
+	}
+
+	.for__list-item {
+		font-size: 18px;
+	}
+
+	.events__top-image {
+		max-width: 100px;
+	}
+
+	.for__title,
+	.events__top-title,
+	.organizers__title,
+	.organizers__titles-title,
+	.mission__text-title,
+	.rates__title,
+	.reviews__title {
+		font-size: 27px;
+	}
+
+	.events {
+		background-image: url("../images/events-bckg-adaptive.png");
+	}
+
+	.events__top-title {
+		left: 15px;
+	}
+
+	.events__desc-title,
+	.events__desc-text {
+		font-size: 18px;
+	}
+
+	.events__desc-date {
+		flex-direction: column;
+		row-gap: 10px;
+	}
+
+	.events__desc-date-item {
+		font-size: 15px;
+	}
+
+	.events__desc-date-item svg {
+		max-width: 24px;
+	}
+
+	.events-btn {
+		margin-top: 30px;
+	}
+
+	.content {
+		margin-left: 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.content__title {
+		font-size: 18px;
+	}
+
+	.content__text {
+		font-size: 16px;
+	}
+
+	.content__link {
+		margin-top: 60px;
+		font-size: 18px;
+		align-self: flex-end;
+	}
+
+	.organizers {
+		padding-top: 100px;
+	}
+
+	.organizers__info {
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.organizers__info-content {
+		order: 2;
+		align-self: baseline;
+		margin-left: 20px;
+	}
+
+	.organizers__info-list {
+		padding-top: 20px;
+		row-gap: 8px;
+	}
+
+	.organizers__info-content.end {
+		align-self: flex-end;
+		margin-left: 0;
+	}
+
+	.organizers__titles-title:nth-child(1) {
+		top: 3%;
+		right: -19%;
+	}
+
+	.organizers__titles-title:nth-child(2) {
+		position: absolute;
+		top: 5%;
+		right: 17%;
+		z-index: -1;
+	}
+
+	.organizers__titles-title:nth-child(3) {
+		bottom: 8%;
+		left: -20%;
+		transform: rotate(-90deg);
+	}
+
+	.organizers__titles-title:nth-child(4) {
+		display: block;
+		position: absolute;
+		bottom: 20%;
+		left: -12%;
+		transform: rotate(-90deg);
+	}
+
+	.mission {
+		padding-bottom: 112px;
+	}
+
+	.mission__text {
+		flex-direction: column;
+		align-items: normal;
+		gap: 40px;
+	}
+
+	.mission__content-image {
+		max-width: 167px;
+	}
+
+	.mission__content-text {
+		align-self: baseline;
+		margin-left: 20px;
+	}
+
+	.mission__content-text-title {
+		font-size: 18px;
+		line-height: 1.2;
+	}
+
+	.mission__content-text-list {
+		padding-top: 25px;
+		row-gap: 15px;
+	}
+
+	.mission__content-text-list-item {
+		font-size: 15px;
+	}
+
+	.mission__content-text-list-item::marker {
+		font-size: 30px;
+	}
+
+	.mission__desc {
+		margin-left: 118px;
+	}
+
+	.rates {
+		background-image: url(../images/rates-bkcg-adaptive.png);
+	}
+
+	.rates__cards {
+		flex-direction: column;
+		row-gap: 17px;
+		column-gap: 0;
+		margin-left: 20px;
+	}
+
+	.rates__cards-adaptive {
+		display: block;
+	}
+
+	.rates__card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: normal;
+	}
+
+	.rates__card-title {
+		font-size: 18px;
+		max-width: 260px;
+	}
+
+	.rates__card-list {
+		font-size: 12px;
+		display: none;
+	}
+
+	.rates__card-price {
+		padding-top: 15px;
+		font-size: 15px;
+		display: none;
+	}
+
+	.rates__card.active .rates__card-title {
+		opacity: 1;
+		color: #ffce00;
+	}
+
+	.rates__card.active .rates__card-list {
+		display: block;
+		opacity: 1;
+	}
+
+	.rates__card.active .rates__card-price {
+		display: block;
+		opacity: 1;
+	}
+
+	.footer {
+		padding: 60px 0;
+		background-size: cover;
+		background-position: right;
+	}
+
+	.rates__btns {
+		padding-top: 100px;
+		flex-direction: column;
+	}
+
+	.content__link {
+		align-self: center;
+		margin-top: 10px;
+	}
+
+	.reviews__title:nth-of-type(1) {
+		top: 7%;
+	}
+
+	.reviews__title:nth-of-type(2) {
+		top: 10%;
+	}
+
+	.reviews__title:nth-of-type(3) {
+		bottom: 40%;
+	}
+}
+
+/* Mobile */
+
+@media screen and (max-width: 425px) {
+	/* Главная картинка в хедере на 375! */
+	/* .header__image {
+		display: block;
+	} */
+
+	.header__image-adaptive {
+		/* display: none; */
+		max-width: 400px;
+		left: -20px;
+		bottom: 100px;
+	}
+	.events__top-image {
+		display: none;
+	}
+
+	.events__top-image-adaptive {
+		display: block;
+	}
+
+	.events__line-bottom-adaptive {
+		display: block;
+	}
+
+	.events__line-bottom-image {
+		display: none;
+	}
+
+	.events__line-bottom {
+		left: 17%;
+		bottom: 165px;
+	}
+
+	.rates__line-image {
+		display: none;
+	}
+
+	.rates__line-image-adaptive {
+		display: block;
+	}
+}
+@media screen and (max-width: 375px) {
+	.form__partner .container {
+		padding: 30px;
+	}
+
+	.form__partner-title {
+		font-size: 16px;
+		text-align: left;
+		max-width: 270px;
+	}
+
+	.close__form img {
+		max-width: 20px;
+	}
+
+	.form__partner-btn {
+		padding: 20px;
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 374px) {
+	.header__title,
+	.header__title span {
+		font-size: 35px;
+	}
+
+	.samoilova {
+		right: 10%;
+	}
+
+	.for {
+		padding-bottom: 50px;
+	}
+
+	.events__top-image-adaptive {
+		max-width: 80px;
+	}
+
+	.events__top-title {
+		font-size: 20px;
+	}
+
+	.events__line-bottom {
+		left: -2%;
+		bottom: 255px;
+	}
+
+	.organizers {
+		padding-top: 50px;
+	}
+
+	.organizers__titles-title:nth-child(3) {
+		left: -32%;
+	}
+
+	.organizers__titles-title:nth-child(4) {
+		bottom: 22%;
+		left: -27%;
+	}
+
+	.mission__text-desc {
+		font-size: 20px;
+	}
+
+	.mission__text-desc span {
+		font-size: 12px;
+		line-height: 1.2;
+	}
+
+	.mission__image {
+		padding-top: 50px;
+	}
+
+	.mission__desc {
+		margin-left: 0;
+	}
+
+	.rates__card-title {
+		font-size: 12px;
+		max-width: 190px;
+	}
+
+	.rates__card-list {
+		font-size: 11px;
+	}
+}

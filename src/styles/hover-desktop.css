@@ -1,0 +1,158 @@
+@media (hover: hover) {
+	.logo:hover {
+		opacity: 0.5;
+	}
+
+	.menu__link:hover {
+		border-bottom: 3px solid #0b0b09;
+	}
+
+	.header__title:hover span {
+		letter-spacing: 0;
+	}
+
+	.menu__icon.tg:hover svg path {
+		fill: #0088cc;
+	}
+
+	.menu__icon.instagram:hover svg {
+		fill: #fff;
+		background: radial-gradient(
+				circle farthest-corner at 35% 90%,
+				#fec564,
+				transparent 50%
+			),
+			radial-gradient(
+				circle farthest-corner at 0 140%,
+				#fec564,
+				transparent 50%
+			),
+			radial-gradient(
+				ellipse farthest-corner at 0 -25%,
+				#5258cf,
+				transparent 50%
+			),
+			radial-gradient(
+				ellipse farthest-corner at 20% -50%,
+				#5258cf,
+				transparent 50%
+			),
+			radial-gradient(
+				ellipse farthest-corner at 100% 0,
+				#893dc2,
+				transparent 50%
+			),
+			radial-gradient(
+				ellipse farthest-corner at 60% -20%,
+				#893dc2,
+				transparent 50%
+			),
+			radial-gradient(
+				ellipse farthest-corner at 100% 100%,
+				#d9317a,
+				transparent
+			),
+			linear-gradient(
+				#6559ca,
+				#bc318f 30%,
+				#e33f5f 50%,
+				#f77638 70%,
+				#fec66d 100%
+			);
+	}
+
+	.menu__icon.instagram:hover svg path {
+		fill: #fff;
+	}
+
+	.btn:hover {
+		background-color: #d8d8d8;
+	}
+
+	.header__content-social-text-link:hover {
+		opacity: 0.8;
+	}
+
+	.content__link:hover {
+		color: #d8d8d8;
+		border-bottom: 1px solid #d8d8d8;
+	}
+
+	.content__link:hover svg path {
+		fill: #d8d8d8;
+	}
+
+	.rates__card:hover .rates__card-title {
+		color: #ffce00;
+		opacity: 1;
+	}
+
+	.rates__card:hover .rates__card-list,
+	.rates__card:hover .rates__card-price {
+		opacity: 1;
+	}
+
+	.prev:hover,
+	.next:hover {
+		background-color: #ffce00;
+	}
+
+	.prev:hover svg path,
+	.next:hover svg path {
+		fill: #0b0b09;
+	}
+
+	.organizers__info-link:hover {
+		opacity: 0.8;
+	}
+
+	.footer__text a:hover {
+		opacity: 0.8;
+	}
+
+	.footer__icon:hover svg {
+		fill: black;
+		background: radial-gradient(
+				circle farthest-corner at 35% 90%,
+				#fec564,
+				transparent 50%
+			),
+			radial-gradient(
+				circle farthest-corner at 0 140%,
+				#fec564,
+				transparent 50%
+			),
+			radial-gradient(
+				ellipse farthest-corner at 0 -25%,
+				#5258cf,
+				transparent 50%
+			),
+			radial-gradient(
+				ellipse farthest-corner at 20% -50%,
+				#5258cf,
+				transparent 50%
+			),
+			radial-gradient(
+				ellipse farthest-corner at 100% 0,
+				#893dc2,
+				transparent 50%
+			),
+			radial-gradient(
+				ellipse farthest-corner at 60% -20%,
+				#893dc2,
+				transparent 50%
+			),
+			radial-gradient(
+				ellipse farthest-corner at 100% 100%,
+				#d9317a,
+				transparent
+			),
+			linear-gradient(
+				#6559ca,
+				#bc318f 30%,
+				#e33f5f 50%,
+				#f77638 70%,
+				#fec66d 100%
+			);
+	}
+}
