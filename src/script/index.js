@@ -80,6 +80,7 @@ class App {
 		this.popupCloseBtn.addEventListener("click", () => {
 			this.popup.classList.remove("active");
 			this.form.reset();
+			window.location.reload();
 		});
 	}
 
@@ -134,57 +135,14 @@ class App {
 					window.location.reload();
 				}, 3000);
 			} else {
-				// Если форма не прошла валидацию, отобразить сообщение об ошибке
+				alert("Заполните пожалуйста все поля");
 			}
 		});
 	}
 
-	// validateForm() {
-	// 	// Получаем все обязательные поля формы
-	// 	const requiredFields = this.form.querySelectorAll("[required]");
-
-	// 	// Регулярные выражения для валидации
-	// 	const regexPatterns = {
-	// 		name: /^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/,
-	// 		last: /^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/,
-	// 		email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-	// 		phone: /^\d{11}$/,
-	// 		telegram: /^[\w]+$/,
-	// 		instagram: /^[\w]+$/,
-	// 		income: /^\d+(\.\d{2})?$/,
-	// 	};
-
-	// 	// Проверяем каждое обязательное поле
-	// 	for (const field of requiredFields) {
-	// 		// Если поле пустое, возвращаем false
-	// 		if (!field.value.trim()) {
-	// 			return true;
-	// 		}
-
-	// 		// Если поле имеет атрибут pattern, проверяем его
-	// 		if (field.hasAttribute("pattern")) {
-	// 			const pattern = new RegExp(field.getAttribute("pattern"));
-	// 			if (!pattern.test(field.value)) {
-	// 				return false;
-	// 			}
-	// 		}
-
-	// 		// Дополнительная валидация для некоторых полей посредством регулярных выражений
-	// 		if (field.name in regexPatterns) {
-	// 			const regexPattern = regexPatterns[field.name];
-	// 			if (!regexPattern.test(field.value)) {
-	// 				return false;
-	// 			}
-	// 		}
-	// 	}
-
-	// 	// Если все поля прошли проверку, возвращаем true
-	// 	return true;
-	// }
-
 	validateForm() {
 		// Получаем все обязательные поля формы
-		const requiredFields = this.form.querySelectorAll("input");
+		const inputs = this.form.querySelectorAll(".form__partner-form-input");
 
 		// Регулярные выражения для валидации
 		const regexPatterns = {
@@ -192,36 +150,45 @@ class App {
 			last: /^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/,
 			email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
 			phone: /^\d{11}$/,
-			telegram: /^[\w]+$/,
-			instagram: /^[\w]+$/,
+			telegram: /^[A-Za-z\d_]{5,32}$/,
+			instagram: /^[a-zA-Z0-9_.]{1,30}$/,
 			income: /^\d+(\.\d{2})?$/,
 		};
 
 		let allValid = true; // Флаг для обозначения общей валидности формы
 
-		// Проверяем каждое обязательное поле
-		for (const field of requiredFields) {
-			const errorMessage = field.nextElementSibling;
-			if (!field.value.trim()) {
-				errorMessage.style.display = "block";
-				allValid = false;
-			} else if (
-				field.hasAttribute("pattern") &&
-				!new RegExp(field.getAttribute("pattern")).test(field.value)
-			) {
-				errorMessage.textContent = "Пожалуйста, введите корректное значение";
-				errorMessage.style.display = "block";
-				allValid = false;
-			} else if (
-				field.name in regexPatterns &&
-				!regexPatterns[field.name].test(field.value)
-			) {
-				errorMessage.textContent = "Пожалуйста, введите корректное значение";
-				errorMessage.style.display = "block";
-				allValid = false;
+		const markAsInvalid = (input) => {
+			input.classList.add("invalid");
+			allValid = false;
+		};
+
+		// Функция для удаления класса invalid
+		const markAsValid = (input) => {
+			input.classList.remove("invalid");
+		};
+
+		// Добавляем обработчик события input для каждого поля ввода
+		inputs.forEach((input) => {
+			const value = input.value.trim();
+			const fieldName = input.getAttribute("name");
+			const regex = regexPatterns[fieldName];
+			const errorSpan = input.nextElementSibling;
+
+			// Если значение пустое, помечаем поле как невалидное и пропускаем проверку регулярным выражением
+			if (value === "") {
+				markAsInvalid(input);
+				errorSpan.style.display = "block";
 			} else {
+				// Если значение не пустое, проверяем его на соответствие регулярному выражению
+				if (!regex.test(value)) {
+					markAsInvalid(input);
+					errorSpan.style.display = "block";
+				} else {
+					markAsValid(input);
+					errorSpan.style.display = "none";
+				}
 			}
-		}
+		});
 
 		// Проверка выбора типа участия
 		const involvementFields = this.form.querySelectorAll(

@@ -1210,6 +1210,10 @@ ul {
 	color: #da1d03;
 }
 
+.form__partner-form-input:invalid + .message__error {
+	display: block;
+}
+
 .form__partner-form-input:valid {
 	background: transparent;
 }
