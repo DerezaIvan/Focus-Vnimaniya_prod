@@ -307,8 +307,8 @@ a {
 
 .events__top-image {
 	position: relative;
-	top: 50px;
-	transform: rotate(-3deg);
+	top: 85px;
+	transform: rotate(-10deg);
 }
 
 .events__top-image-adaptive {
@@ -334,6 +334,10 @@ a {
 	align-items: flex-end;
 	justify-content: space-evenly;
 	padding-bottom: 331px;
+}
+
+.evets__desc {
+	margin-left: 30px;
 }
 
 .events__desc-title {
