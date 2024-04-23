@@ -46,6 +46,13 @@
 		justify-content: space-around;
 	}
 }
+/* 1919px - 1440px */
+@media screen and (max-width: 1919px) {
+	.events__line-bottom {
+		bottom: -15px;
+		transform: rotate(-14deg);
+	}
+}
 
 /* 1440px - 1024px */
 @media screen and (max-width: 1439px) {
@@ -132,8 +139,9 @@
 
 	.events__top-image {
 		max-width: 400px;
-		left: -20px;
+		left: -37px;
 		top: 20px;
+		transform: rotate(-5deg);
 	}
 
 	.events__top-title {
@@ -155,8 +163,8 @@
 	}
 
 	.events__line-bottom {
-		left: 37%;
-		bottom: 164px;
+		left: 38%;
+		bottom: 230px;
 		transform: none;
 	}
 
@@ -553,6 +561,41 @@
 	}
 }
 
+@media screen and (max-width: 768px) {
+	.header {
+		background-image: url("../images/header-bckg-adaptive.png");
+		background-size: 100% 100%;
+	}
+
+	.events {
+		background-image: url("../images/main-bckg-adaptive.png");
+	}
+
+	.events__content {
+		margin-left: 120px;
+		align-items: flex-start;
+	}
+
+	.events__desc-title,
+	.events__desc-text {
+		max-width: 500px;
+		margin: 0;
+	}
+
+	.events__line-bottom {
+		bottom: 227px;
+	}
+
+	.rates {
+		/* background-image: url(../images/rates-768.png); */
+		background-position: top;
+	}
+
+	.rates__line {
+		top: 3%;
+		right: 10%;
+	}
+}
 /* 767px - 375px  */
 
 @media screen and (max-width: 767px) {
@@ -631,6 +674,7 @@
 	.for__container {
 		flex-direction: column;
 		align-items: flex-start;
+		row-gap: 20px;
 	}
 
 	.for__title {
@@ -888,12 +932,7 @@
 
 /* Mobile */
 
-@media screen and (max-width: 425px) {
-	/* Главная картинка в хедере на 375! */
-	/* .header__image {
-		display: block;
-	} */
-
+@media screen and (max-width: 767px) {
 	.header__image-adaptive {
 		/* display: none; */
 		max-width: 400px;
@@ -917,8 +956,12 @@
 	}
 
 	.events__line-bottom {
-		left: 17%;
-		bottom: 165px;
+		left: 18%;
+		bottom: 200px;
+	}
+
+	.events__content {
+		margin: 0 auto;
 	}
 
 	.rates__line-image {
@@ -929,7 +972,7 @@
 		display: block;
 	}
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 424px) {
 	.form__partner .container {
 		padding: 30px;
 	}
@@ -948,6 +991,70 @@
 		padding: 20px;
 		font-size: 14px;
 	}
+
+	.events__line-bottom {
+		left: 10%;
+		bottom: 213px;
+	}
+
+	.events__content {
+		row-gap: 140px;
+	}
+
+	.for {
+		padding-bottom: 0;
+	}
+
+	.content__text {
+		padding-bottom: 75px;
+	}
+
+	.rates {
+		background-image: url(../images/rates-375.png);
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.organizers__line {
+		display: block;
+	}
+
+	.organizers-line-right {
+		position: absolute;
+		top: 29%;
+		right: 7%;
+	}
+
+	.organizers-line-left {
+		position: absolute;
+		top: 522px;
+		left: 9%;
+	}
+
+	.rates {
+		background-image: url(../images/rates-375.png);
+		background-size: 100% 100%;
+		padding-top: 0;
+		padding-bottom: 100px;
+	}
+
+	.rates__title {
+		margin-left: 0;
+		bottom: 20px;
+	}
+
+	.rates__card-list {
+		padding-top: 0;
+	}
+
+	.rates__line {
+		top: 2%;
+		right: -5%;
+	}
+
+	.footer__logo {
+		order: 1;
+	}
 }
 
 @media screen and (max-width: 374px) {
@@ -958,10 +1065,6 @@
 
 	.samoilova {
 		right: 10%;
-	}
-
-	.for {
-		padding-bottom: 50px;
 	}
 
 	.events__top-image-adaptive {
