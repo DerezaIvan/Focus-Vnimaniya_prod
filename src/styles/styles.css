@@ -24,6 +24,10 @@ a {
 	color: inherit;
 }
 
+ul {
+	list-style-type: none;
+}
+
 .page {
 	overflow: hidden;
 }
@@ -278,17 +282,20 @@ a {
 	text-align: left;
 	text-transform: uppercase;
 	color: #f4f4f4;
+	display: flex;
+	gap: 15px;
+}
+
+.for__list-item svg {
+	width: 100%;
+	max-width: 20px;
+	margin-top: 10px;
 }
 
 .for__list-item span {
 	font-family: "Prosto One", sans-serif;
 	letter-spacing: 0.04em;
 	font-style: normal;
-}
-
-.for__list-item::marker {
-	font-size: 55px;
-	color: #ffce00;
 }
 
 /* Стили для Events */
@@ -504,6 +511,13 @@ a {
 	font-weight: 600;
 	line-height: 21.6px;
 	color: #f4f4f4;
+	display: flex;
+	gap: 10px;
+}
+
+.organizers__info-list-item svg {
+	width: 100%;
+	max-width: 15px;
 }
 
 .organizers__info-list-item::marker {
@@ -647,6 +661,14 @@ a {
 	font-size: 24px;
 	line-height: 140%;
 	color: #f4f4f4;
+	display: flex;
+	gap: 10px;
+}
+
+.mission__content-text-list-item svg {
+	width: 100%;
+	max-width: 20px;
+	/* margin-top: 10px; */
 }
 
 .mission__content-text-list-item::marker {
