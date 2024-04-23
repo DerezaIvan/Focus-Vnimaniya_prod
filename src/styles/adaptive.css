@@ -971,6 +971,11 @@
 	.rates__line-image-adaptive {
 		display: block;
 	}
+
+	.form__partner-btn {
+		padding: 20px;
+		font-size: 14px;
+	}
 }
 @media screen and (max-width: 424px) {
 	.form__partner .container {
@@ -985,11 +990,6 @@
 
 	.close__form img {
 		max-width: 20px;
-	}
-
-	.form__partner-btn {
-		padding: 20px;
-		font-size: 14px;
 	}
 
 	.events__line-bottom {

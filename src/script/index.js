@@ -56,6 +56,7 @@ class App {
 		this.ratesCards = document.querySelectorAll(".rates__card");
 		this.ratesCardTitles = document.querySelectorAll(".rates__card-title");
 		this.form = document.getElementById("form__partner-form");
+		this.formTitle = document.getElementById("form__partner-title");
 
 		this.modalClose();
 		this.modalOpen();
@@ -70,6 +71,7 @@ class App {
 		this.btnFormOpen.forEach((btn) => {
 			btn.addEventListener("click", () => {
 				this.popup.classList.add("active");
+				document.body.style.overflow = "hidden";
 			});
 		});
 	}
@@ -77,6 +79,7 @@ class App {
 	modalClose() {
 		this.popupCloseBtn.addEventListener("click", () => {
 			this.popup.classList.remove("active");
+			this.form.reset();
 		});
 	}
 
@@ -120,54 +123,168 @@ class App {
 			if (this.validateForm()) {
 				const formData = new FormData(this.form);
 				sendFormDataToTelegram(formData);
+
+				this.form.style.display = "none";
+				this.popup.querySelector(".container").style.height = "300px";
+				this.formTitle.textContent =
+					"Спасибо за Вашу заявку, мы свяжемся с Вами в ближайшее время!";
+				setTimeout(() => {
+					this.popup.classList.remove("active");
+					this.form.reset();
+					window.location.reload();
+				}, 3000);
 			} else {
 				// Если форма не прошла валидацию, отобразить сообщение об ошибке
-				alert(
-					"Пожалуйста, заполните все обязательные поля и введите корректные данные."
-				);
 			}
 		});
 	}
 
+	// validateForm() {
+	// 	// Получаем все обязательные поля формы
+	// 	const requiredFields = this.form.querySelectorAll("[required]");
+
+	// 	// Регулярные выражения для валидации
+	// 	const regexPatterns = {
+	// 		name: /^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/,
+	// 		last: /^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/,
+	// 		email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+	// 		phone: /^\d{11}$/,
+	// 		telegram: /^[\w]+$/,
+	// 		instagram: /^[\w]+$/,
+	// 		income: /^\d+(\.\d{2})?$/,
+	// 	};
+
+	// 	// Проверяем каждое обязательное поле
+	// 	for (const field of requiredFields) {
+	// 		// Если поле пустое, возвращаем false
+	// 		if (!field.value.trim()) {
+	// 			return true;
+	// 		}
+
+	// 		// Если поле имеет атрибут pattern, проверяем его
+	// 		if (field.hasAttribute("pattern")) {
+	// 			const pattern = new RegExp(field.getAttribute("pattern"));
+	// 			if (!pattern.test(field.value)) {
+	// 				return false;
+	// 			}
+	// 		}
+
+	// 		// Дополнительная валидация для некоторых полей посредством регулярных выражений
+	// 		if (field.name in regexPatterns) {
+	// 			const regexPattern = regexPatterns[field.name];
+	// 			if (!regexPattern.test(field.value)) {
+	// 				return false;
+	// 			}
+	// 		}
+	// 	}
+
+	// 	// Если все поля прошли проверку, возвращаем true
+	// 	return true;
+	// }
+
 	validateForm() {
 		// Получаем все обязательные поля формы
-		const requiredFields = this.form.querySelectorAll("[required]");
+		const requiredFields = this.form.querySelectorAll("input");
 
 		// Регулярные выражения для валидации
 		const regexPatterns = {
-			email: /^\S+@\S+\.\S+$/,
+			name: /^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/,
+			last: /^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/,
+			email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
 			phone: /^\d{11}$/,
 			telegram: /^[\w]+$/,
 			instagram: /^[\w]+$/,
 			income: /^\d+(\.\d{2})?$/,
 		};
 
+		let allValid = true; // Флаг для обозначения общей валидности формы
+
 		// Проверяем каждое обязательное поле
 		for (const field of requiredFields) {
-			// Если поле пустое, возвращаем false
+			const errorMessage = field.nextElementSibling;
 			if (!field.value.trim()) {
-				return false;
-			}
-
-			// Если поле имеет атрибут pattern, проверяем его
-			if (field.hasAttribute("pattern")) {
-				const pattern = new RegExp(field.getAttribute("pattern"));
-				if (!pattern.test(field.value)) {
-					return false;
-				}
-			}
-
-			// Дополнительная валидация для некоторых полей посредством регулярных выражений
-			if (field.name in regexPatterns) {
-				const regexPattern = regexPatterns[field.name];
-				if (!regexPattern.test(field.value)) {
-					return false;
-				}
+				errorMessage.style.display = "block";
+				allValid = false;
+			} else if (
+				field.hasAttribute("pattern") &&
+				!new RegExp(field.getAttribute("pattern")).test(field.value)
+			) {
+				errorMessage.textContent = "Пожалуйста, введите корректное значение";
+				errorMessage.style.display = "block";
+				allValid = false;
+			} else if (
+				field.name in regexPatterns &&
+				!regexPatterns[field.name].test(field.value)
+			) {
+				errorMessage.textContent = "Пожалуйста, введите корректное значение";
+				errorMessage.style.display = "block";
+				allValid = false;
+			} else {
 			}
 		}
 
-		// Если все поля прошли проверку, возвращаем true
-		return true;
+		// Проверка выбора типа участия
+		const involvementFields = this.form.querySelectorAll(
+			"[name='involvement']"
+		);
+		let involvementChecked = false;
+		for (const field of involvementFields) {
+			if (field.checked) {
+				involvementChecked = true;
+				break;
+			}
+		}
+		if (!involvementChecked) {
+			const errorMessage = this.form.querySelector(
+				".checkboxs .message__error"
+			);
+			if (errorMessage) {
+				errorMessage.textContent = "Пожалуйста, выберите тип участия";
+				errorMessage.style.display = "block";
+			}
+			allValid = false;
+		} else {
+			const errorMessage = this.form.querySelector(
+				".checkboxs .message__error"
+			);
+			if (errorMessage) {
+				errorMessage.textContent = "";
+				errorMessage.style.display = "none";
+			}
+		}
+
+		// Проверка согласия с условиями
+		const agreementFields = this.form.querySelectorAll(
+			"[name='offer'], [name='personal-date'], [name='distribution']"
+		);
+		let agreementChecked = true;
+		for (const field of agreementFields) {
+			if (!field.checked) {
+				agreementChecked = false;
+				break;
+			}
+		}
+		if (!agreementChecked) {
+			const errorMessage = this.form.querySelector(
+				".agreement-checkbox .message__error"
+			);
+			if (errorMessage) {
+				errorMessage.textContent = "Пожалуйста, подтвердите согласие";
+				errorMessage.style.display = "block";
+			}
+			allValid = false;
+		} else {
+			const errorMessage = this.form.querySelector(
+				".agreement-checkbox .message__error"
+			);
+			if (errorMessage) {
+				errorMessage.textContent = "";
+				errorMessage.style.display = "none";
+			}
+		}
+
+		// Возвращаем общую валидность формы
+		return allValid;
 	}
 }
 

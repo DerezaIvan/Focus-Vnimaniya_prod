@@ -1108,7 +1108,7 @@
 
 		<div class="form__partner" id="form__popup">
 			<div class="container">
-				<h3 class="form__partner-title">
+				<h3 class="form__partner-title" id="form__partner-title">
 					Для регистрации на участие в конференции-нетворкинге заполните анкету
 				</h3>
 				<form class="form__partner-form" id="form__partner-form">
@@ -1118,6 +1118,8 @@
 						name="name"
 						placeholder="Имя"
 						id="name"
+						minlength="2"
+						pattern="^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$"
 					/>
 					<span class="message__error"
 						>Пожалуйста, введите корректное значение</span
@@ -1128,6 +1130,8 @@
 						name="last"
 						placeholder="Фамилия"
 						id="last"
+						minlength="2"
+						pattern="^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$"
 					/>
 					<span class="message__error"
 						>Пожалуйста, введите корректное значение</span
@@ -1137,6 +1141,7 @@
 						type="number"
 						name="number"
 						id="number"
+						minlength="11"
 						placeholder="Номер телефона"
 					/>
 					<span class="message__error"
@@ -1157,6 +1162,7 @@
 						type="text"
 						name="telegram"
 						id="telegram"
+						minlength="2"
 						placeholder="Ник в Telegram"
 					/>
 					<span class="message__error"
@@ -1168,6 +1174,7 @@
 						type="text"
 						name="insta"
 						id="insta"
+						minlength="2"
 						placeholder="Ник в Instagram"
 					/>
 					<span class="message__error"
@@ -1179,14 +1186,19 @@
 						type="text"
 						name="niche"
 						id="niche"
+						minlength="2"
 						placeholder="Ниша"
 					/>
+					<span class="message__error"
+						>Пожалуйста, введите корректное значение</span
+					>
 
 					<input
 						class="form__partner-form-input"
 						type="text"
 						name="income"
 						id="income"
+						minlength="3"
 						placeholder="Доход"
 					/>
 					<span class="message__error"
@@ -1259,8 +1271,10 @@
 								<input type="checkbox" id="distribution" name="distribution" />
 								<label for="distribution">Согласен на рассылку анонсов</label>
 							</div>
+							<span class="message__error"
+								>Пожалуйста, подтвердите согласие</span
+							>
 						</div>
-						<span class="message__error">Пожалуйста, подтвердите согласие</span>
 					</div>
 					<button class="form__partner-btn btn" type="submit" id="btn-submit">
 						Зарегистрироваться
