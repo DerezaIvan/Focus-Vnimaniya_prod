@@ -85,7 +85,8 @@ import { initSlider } from "./slider.js";
 		}
 
 		burgerMenuClose() {
-			this.burgerMenuBtnClose.addEventListener("click", () => {
+			this.burgerMenuBtnClose.addEventListener("click", (e) => {
+				e.preventDefault();
 				this.burgerMenu.classList.remove("active");
 				this.burgerMenuBtnClose.classList.remove("active");
 			});
