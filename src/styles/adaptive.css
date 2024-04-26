@@ -215,7 +215,7 @@
 	}
 
 	.header__content-image img {
-		max-width: 600px;
+		max-width: 750px;
 	}
 
 	.header__subtitle,
@@ -335,7 +335,7 @@
 	}
 
 	.mission__content {
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
 
 	.mission__content-text {
@@ -532,6 +532,7 @@
 		z-index: 1;
 		width: 392px;
 		font-size: 22px;
+		max-height: 50px;
 	}
 
 	.for .container {
@@ -864,6 +865,10 @@
 		background-image: url("../images/header-bckg-adaptive-mobile.png");
 	}
 
+	.header__top {
+		padding-top: 30px;
+	}
+
 	.header__content {
 		position: relative;
 	}
@@ -882,7 +887,7 @@
 
 	.header__title {
 		font-size: 40px;
-		margin-top: 65px;
+		margin-top: 30px;
 	}
 
 	.header__subtitle {
@@ -1246,11 +1251,11 @@
 	.reviews__title:nth-of-type(1) {
 		right: 0;
 		left: 21%;
-		top: -2%;
+		top: -8%;
 	}
 
 	.reviews__title:nth-of-type(2) {
-		top: 2%;
+		top: -3%;
 		left: 5%;
 	}
 
@@ -1259,6 +1264,9 @@
 		bottom: 25%;
 	}
 
+	.image-slider__image img {
+		max-height: 400px;
+	}
 	.buttons__slide {
 		padding-top: 50px;
 	}

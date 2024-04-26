@@ -3,76 +3,76 @@
 		proccesBtn: null,
 		fields: [
 			{
-				name: "name",
-				id: "name",
+				name: "name-speaker",
+				id: "name-speaker",
 				element: null,
 				errorElement: null,
 				regex: /^[a-zA-Zа-яА-ЯёЁ\s]+$/,
 				valid: false,
-				label: null,
+				labelElement: null,
 			},
 			{
-				name: "lastName",
-				id: "last-name",
+				name: "last-name-speaker",
+				id: "last-name-speaker",
 				element: null,
 				errorElement: null,
 				regex: /^[a-zA-Zа-яА-ЯёЁ\s]+$/,
 				valid: false,
-				label: null,
+				labelElement: null,
 			},
 			{
-				name: "phone",
-				id: "phone",
+				name: "phone-speaker",
+				id: "phone-speaker",
 				element: null,
 				errorElement: null,
 				regex: /^\d{11}$/,
 				valid: false,
-				label: null,
+				labelElement: null,
 			},
 			{
-				name: "email",
-				id: "email",
-				element: null,
-				errorElement: null,
-				regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-				valid: false,
-				label: null,
-			},
-			{
-				name: "telegram",
-				id: "telegram",
+				name: "telegram-speaker",
+				id: "telegram-speaker",
 				element: null,
 				errorElement: null,
 				regex: /^[A-Za-z\d_]{5,32}$/,
 				valid: false,
-				label: null,
+				labelElement: null,
 			},
 			{
-				name: "instagram",
-				id: "insta",
+				name: "insta-speaker",
+				id: "insta-speaker",
 				element: null,
 				errorElement: null,
-				regex: /^[a-zA-Z0-9_.]{1,30}$/,
+				regex: /^[a-zA-Z0-9_]{1,30}$/, // Исправлено
 				valid: false,
-				label: null,
+				labelElement: null,
 			},
 			{
-				name: "niche",
-				id: "niche",
+				name: "niche-speaker",
+				id: "niche-speaker",
 				element: null,
 				errorElement: null,
-				regex: /^[a-zA-Zа-яА-ЯёЁ]+$/,
+				regex: /^[a-zA-Zа-яА-ЯёЁ0-9\s.,!?]+$/,
 				valid: false,
-				label: null,
+				labelElement: null,
 			},
 			{
-				name: "income",
-				id: "income",
+				name: "public-speaker",
+				id: "public-speaker",
 				element: null,
 				errorElement: null,
-				regex: /^\d+$/,
+				regex: /^[a-zA-Zа-яА-ЯёЁ0-9\s.,!?]+$/,
 				valid: false,
-				label: null,
+				labelElement: null,
+			},
+			{
+				name: "link-speaker",
+				id: "link-speaker",
+				element: null,
+				errorElement: null,
+				regex: /^[a-zA-Zа-яА-ЯёЁ0-9\s.,!?]+$/,
+				valid: false,
+				labelElement: null,
 			},
 		],
 		init() {
@@ -81,31 +81,19 @@
 				item.element = document.getElementById(item.id);
 				item.errorElement = document.getElementById(`${item.id}__error`);
 				item.labelElement = document.getElementById(`${item.id}__label`);
-				item.element.onchange = function () {
-					that.validateField.call(that, item, this);
+				item.element.onchange = function (e) {
+					that.validateField.call(that, item, e.target);
 				};
 			});
+			const agreeElement = document.getElementById("agree");
+			agreeElement.onchange = function () {
+				that.validateForm();
+			};
 
-			this.proccesBtn = document.getElementById("btn-submit");
+			this.proccesBtn = document.getElementById("speaker__btn-submit");
 			this.proccesBtn.addEventListener("click", function () {
 				that.validateForm();
 				that.submitForm();
-			});
-
-			this.agreeElements = document.querySelectorAll(".checkbox__agree");
-			this.agreeElements.forEach((element) => {
-				element.addEventListener("change", function () {
-					that.validateForm();
-				});
-			});
-
-			const radioElements = document.querySelectorAll(
-				'input[type="radio"][name="involvement"]'
-			);
-			radioElements.forEach((element) => {
-				element.addEventListener("change", function () {
-					that.validateForm();
-				});
 			});
 		},
 		validateField(field, element) {
@@ -125,44 +113,32 @@
 
 		validateForm() {
 			const validForm = this.fields.every((item) => item.valid);
-			const radioChecked = Array.from(
-				document.querySelectorAll('input[type="radio"][name="involvement"]')
-			).some((radio) => radio.checked);
-			const allChecked = Array.from(this.agreeElements).every(
-				(element) => element.checked
-			);
-			if (validForm && radioChecked && allChecked) {
+
+			if (validForm) {
 				this.proccesBtn.removeAttribute("disabled");
 			} else {
 				this.proccesBtn.setAttribute("disabled", "disabled");
 			}
 		},
+
 		submitForm() {
 			const that = this;
-			const form = document.getElementById("form");
-			form.addEventListener("submit", function (e) {
+			const speakerForm = document.getElementById("form__speaker");
+			speakerForm.addEventListener("submit", function (e) {
 				e.preventDefault();
 				const token = "6538342286:AAHOrzyzSHDUl_Q1qNCjloNBzgeBG9JIGi0";
 				const chatId = "-1002107521234";
 				const urlApi = `https://api.telegram.org/bot${token}/sendMessage`;
 
-				let message = "<b>Привет! У Вас есть новая заявка:</b>\n";
+				let message = "<b>Привет! У Вас есть новая анкета спикера:</b>\n";
 				message += `<b>Имя: </b> ${this.name.value}\n`;
 				message += `<b>Фамилия: </b> ${this.lastName.value}\n`;
 				message += `<b>Номер телефона: </b> ${this.phone.value}\n`;
 				message += `<b>Ник в Telegram: </b> ${this.telegram.value}\n`;
 				message += `<b>Ник в Instagram: </b> ${this.insta.value}\n`;
 				message += `<b>Ниша: </b> ${this.niche.value}\n`;
-				message += `<b>Доход: </b> ${this.income.value}\n`;
-
-				const involvement = document.querySelector(
-					'input[name="involvement"]:checked'
-				);
-				if (involvement) {
-					message += `<b>Тип участия: </b> ${involvement.value}\n`;
-				} else {
-					message += `<b>Тип участия: </b> не выбран\n`;
-				}
+				message += `<b>публика: </b> ${this.public.value}\n`;
+				message += `<b>Ссылка: </b> ${this.link.value}\n`;
 
 				axios
 					.post(urlApi, {
@@ -173,7 +149,7 @@
 					.then(() => {
 						// После успешной отправки формы в телеграм можно закрыть модальное окно
 						const popup = document
-							.getElementById("popup")
+							.getElementById("speaker__popup")
 							.classList.remove("active");
 						that.showApplicationWindow();
 					})
@@ -193,7 +169,7 @@
 				application.classList.remove("active");
 				window.location.reload();
 			}, 2000);
-			document.getElementById("form").reset();
+			document.getElementById("form__speaker").reset();
 		},
 	};
 	Form.init();

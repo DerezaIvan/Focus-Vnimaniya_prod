@@ -1141,7 +1141,7 @@
 							name="name"
 							required
 						/>
-						<label for="name" class="form__label">Имя</label>
+						<label for="name" class="form__label" id="name__label">Имя</label>
 						<span class="message__error" id="name__error">
 							Пожалуйста, введите корректное значение</span
 						>
@@ -1154,7 +1154,9 @@
 							name="lastName"
 							required
 						/>
-						<label for="last-name" class="form__label">Фамилия</label>
+						<label for="last-name" class="form__label" id="last-name__label"
+							>Фамилия</label
+						>
 						<span class="message__error" id="last-name__error">
 							Пожалуйста, введите корректное значение</span
 						>
@@ -1167,7 +1169,9 @@
 							name="phone"
 							required
 						/>
-						<label for="phone" class="form__label">Номер телефона</label>
+						<label for="phone" class="form__label" id="phone__label"
+							>Номер телефона</label
+						>
 						<span class="message__error" id="phone__error">
 							Пожалуйста, введите 11-значный номер телефона</span
 						>
@@ -1180,7 +1184,9 @@
 							name="email"
 							required
 						/>
-						<label for="email" class="form__label">E-mail</label>
+						<label for="email" class="form__label" id="email__label"
+							>E-mail</label
+						>
 						<span class="message__error" id="email__error">
 							Пожалуйста, введите корректное значение</span
 						>
@@ -1193,7 +1199,9 @@
 							name="telegram"
 							required
 						/>
-						<label for="telegram" class="form__label">Ник в Telegram</label>
+						<label for="telegram" class="form__label" id="telegtam__label"
+							>Ник в Telegram</label
+						>
 						<span class="message__error" id="telegram__error">
 							Пожалуйста, введите корректный никнейм</span
 						>
@@ -1206,7 +1214,9 @@
 							name="insta"
 							required
 						/>
-						<label for="insta" class="form__label">Ник в Instagram</label>
+						<label for="insta" class="form__label" id="insta__label"
+							>Ник в Instagram</label
+						>
 						<span class="message__error" id="insta__error">
 							Пожалуйста, введите корректный никнейм</span
 						>
@@ -1219,7 +1229,9 @@
 							name="niche"
 							required
 						/>
-						<label for="niche" class="form__label">Ниша</label>
+						<label for="niche" class="form__label" id="niche__label"
+							>Ниша</label
+						>
 						<span class="message__error" id="niche__error">
 							Пожалуйста, введите корректное значение</span
 						>
@@ -1232,7 +1244,9 @@
 							name="income"
 							required
 						/>
-						<label for="income" class="form__label">Доход</label>
+						<label for="income" class="form__label" id="income__label"
+							>Доход</label
+						>
 						<span class="message__error" id="income__error">
 							Пожалуйста, введите корректный доход
 						</span>
@@ -1334,6 +1348,205 @@
 			</div>
 		</div>
 
+		<div class="popup" id="speaker__popup">
+			<div class="container">
+				<h3 class="popup__title speaker__title" id="speaker__popup-title">
+					Анкета спикера
+				</h3>
+				<p class="popup__text">
+					Дорогой спикер, благодарим тебя за желание выступать на наших
+					мероприятиях. Заполни форму максимально подробно и честно, прикрепляя
+					ссылки на свои прошлые выступления. Если опыта нет, это тоже не
+					страшно, пиши честно свой текущий опыт, у нас предусмотрены разные
+					пакеты участия.
+				</p>
+				<p class="popup__text">
+					На каждое мероприятие мы получаем огромное количество заявок и очень
+					тщательно формируем спикерский состав, мы свяжемся с вами в порядке
+					очереди. Если с вами не связались, не расстраивайтесь, к сожалению,
+					количество спикеров каждом мероприятии ограничено, но мы всех вносим в
+					базу спикеров и свяжемся с вами в следующий раз.
+				</p>
+				<form class="form" id="form__speaker">
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="name-speaker"
+							name="name"
+							required
+						/>
+						<label
+							for="name-speaker"
+							class="form__label"
+							id="name-speaker__label"
+							>Имя</label
+						>
+						<span class="message__error" id="name-speaker__error"
+							>Пожалуйста, введите корректное значение</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="last-name-speaker"
+							name="lastName"
+							required
+						/>
+						<label
+							for="last-name-speaker"
+							class="form__label"
+							id="last-name-speaker__label"
+							>Фамилия</label
+						>
+						<span class="message__error" id="last-name-speaker__error"
+							>Пожалуйста, введите корректное значение</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="phone-speaker"
+							name="phone"
+							required
+						/>
+						<label
+							for="phone-speaker"
+							class="form__label"
+							id="phone-speaker__label"
+							>Номер телефона</label
+						>
+						<span class="message__error" id="phone-speaker__error"
+							>Пожалуйста, введите 11-значный номер телефона</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="telegram-speaker"
+							name="telegram"
+							required
+						/>
+						<label
+							for="telegram-speaker"
+							class="form__label"
+							id="telegram-speaker__label"
+							>Ник в Telegram</label
+						>
+						<span class="message__error" id="telegram-speaker__error"
+							>Пожалуйста, введите корректный никнейм</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="insta-speaker"
+							name="insta"
+							required
+						/>
+						<label
+							for="insta-speaker"
+							class="form__label"
+							id="insta-speaker__label"
+							>Ник в Instagram</label
+						>
+						<span class="message__error" id="insta-speaker__error"
+							>Пожалуйста, введите корректный никнейм</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="niche-speaker"
+							name="niche"
+							required
+						/>
+						<label
+							for="niche-speaker"
+							class="form__label"
+							id="niche-speaker__label"
+							>Экспертность. Ниша, опыт работы, кейсы</label
+						>
+						<span class="message__error" id="niche-speaker__error"
+							>Пожалуйста, введите корректное значение</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="public-speaker"
+							name="public"
+							required
+						/>
+						<label
+							for="public-speaker"
+							class="form__label"
+							id="public-speaker__label"
+							>Опыт публичных выступлений*</label
+						>
+						<p class="form__group-text">
+							*Количество выступлений. Количество человек в зале. Какие
+							результаты были после выступления
+						</p>
+						<span class="message__error" id="public-speaker__error"
+							>Пожалуйста, введите корректное значение</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="link-speaker"
+							name="link"
+							required
+						/>
+						<label
+							for="link-speaker"
+							class="form__label"
+							id="link-speaker__label"
+							>Ссылка на видео выступлений</label
+						>
+						<span class="message__error" id="link-speaker__error"
+							>Пожалуйста, введите корректное значение</span
+						>
+					</div>
+					<div class="agreement-checkbox">
+						<p class="form__partner-text">
+							Нажимая на кнопку, я подтверждаю, что
+						</p>
+						<div class="checkbox">
+							<input
+								type="checkbox"
+								id="agree"
+								class="speaker-checkbox__agree"
+								required
+							/>
+							<label for="agree"
+								>Согласен на <span>обработку персональных данных</span></label
+							>
+						</div>
+					</div>
+					<button
+						class="form__partner-btn btn"
+						type="submit"
+						id="speaker__btn-submit"
+						disabled
+					>
+						Зарегистрироваться
+					</button>
+					<button class="close__form" id="speaker__close-form">
+						<img src="./src/images/btn-close.png" alt="" />
+					</button>
+				</form>
+			</div>
+		</div>
+
 		<div class="application" id="application">
 			<div class="application__container">
 				<h2 class="application__title">
@@ -1345,5 +1558,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="src/script/index.js" type="module"></script>
 		<script src="src/script/form.js"></script>
+		<script src="src/script/form-speaker.js"></script>
 	</body>
 </html>
