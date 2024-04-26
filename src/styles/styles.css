@@ -797,6 +797,10 @@ ul {
 	justify-content: space-between;
 }
 
+.rates__btn {
+	margin: 0 auto;
+}
+
 .speaker,
 .partner {
 	display: flex;
@@ -1127,6 +1131,10 @@ ul {
 .checkbox__label span {
 	padding-top: 20px;
 	display: inline-block;
+}
+
+.checkbox label a {
+	text-decoration: underline;
 }
 
 .agreement-checkbox .checkbox label span {

@@ -58,6 +58,10 @@
 		max-width: 1300px;
 	}
 
+	.footer .container {
+		max-width: 1300px;
+	}
+
 	.for__title,
 	.organizers__title,
 	.organizers__titles-title,
@@ -776,6 +780,10 @@
 
 	.rates__btns {
 		padding-top: 150px;
+	}
+
+	.rates__btn {
+		margin: 0;
 	}
 
 	.speaker__title,

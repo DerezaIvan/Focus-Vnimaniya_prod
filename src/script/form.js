@@ -30,47 +30,11 @@
 				label: null,
 			},
 			{
-				name: "email",
-				id: "email",
-				element: null,
-				errorElement: null,
-				regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-				valid: false,
-				label: null,
-			},
-			{
 				name: "telegram",
 				id: "telegram",
 				element: null,
 				errorElement: null,
 				regex: /^[A-Za-z\d_]{5,32}$/,
-				valid: false,
-				label: null,
-			},
-			{
-				name: "instagram",
-				id: "insta",
-				element: null,
-				errorElement: null,
-				regex: /^[a-zA-Z0-9_.]{1,30}$/,
-				valid: false,
-				label: null,
-			},
-			{
-				name: "niche",
-				id: "niche",
-				element: null,
-				errorElement: null,
-				regex: /^[a-zA-Zа-яА-ЯёЁ]+$/,
-				valid: false,
-				label: null,
-			},
-			{
-				name: "income",
-				id: "income",
-				element: null,
-				errorElement: null,
-				regex: /^\d+$/,
 				valid: false,
 				label: null,
 			},
@@ -151,9 +115,6 @@
 				message += `<b>Фамилия: </b> ${this.lastName.value}\n`;
 				message += `<b>Номер телефона: </b> ${this.phone.value}\n`;
 				message += `<b>Ник в Telegram: </b> ${this.telegram.value}\n`;
-				message += `<b>Ник в Instagram: </b> ${this.insta.value}\n`;
-				message += `<b>Ниша: </b> ${this.niche.value}\n`;
-				message += `<b>Доход: </b> ${this.income.value}\n`;
 
 				const involvement = document.querySelector(
 					'input[name="involvement"]:checked'

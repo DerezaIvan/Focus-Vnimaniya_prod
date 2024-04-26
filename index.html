@@ -946,23 +946,27 @@
 				</div>
 			</section>
 			<section class="buttons">
-				<button class="rates__btn btn btn-register">Зарегистрироваться</button>
-				<div class="rates__btns">
-					<div class="speaker">
-						<h3 class="speaker__title">Стать спикером</h3>
-						<button class="speaker__btn content__link" id="speaker__btn">
-							Заполнить анкету
-						</button>
-					</div>
-					<div class="partner">
-						<h3 class="partner__title">Стать партнером</h3>
-						<a
-							href="https://t.me/Fokysvnimaniya"
-							class="partner__btn content__link"
-							target="_blank"
-						>
-							Перейти в телеграм
-						</a>
+				<div class="container">
+					<button class="rates__btn btn btn-register">
+						Зарегистрироваться
+					</button>
+					<div class="rates__btns">
+						<div class="speaker">
+							<h3 class="speaker__title">Стать спикером</h3>
+							<button class="speaker__btn content__link" id="speaker__btn">
+								Заполнить анкету
+							</button>
+						</div>
+						<div class="partner">
+							<h3 class="partner__title">Стать партнером</h3>
+							<a
+								href="https://t.me/Fokysvnimaniya"
+								class="partner__btn content__link"
+								target="_blank"
+							>
+								Перейти в телеграм
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -1066,8 +1070,16 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__text">
-					<a href="№">Договор оферты </a>
-					<a href="№">Политика обработки данных </a>
+					<a
+						href="https://drive.google.com/file/d/11lMHKePDFvgeKix2ejiL9TEFdcnzGL4-/view"
+						target="_blank"
+						>Договор оферты
+					</a>
+					<a
+						href="https://drive.google.com/file/d/1FrzVRvMGrSd1QEdhJo7Bt2iiNBt0K1gZ/view"
+						target="_blank"
+						>Политика обработки данных
+					</a>
 				</div>
 				<div class="footer__logo">
 					<a href="#"
@@ -1180,21 +1192,6 @@
 						<input
 							type="text"
 							class="form__input"
-							id="email"
-							name="email"
-							required
-						/>
-						<label for="email" class="form__label" id="email__label"
-							>E-mail</label
-						>
-						<span class="message__error" id="email__error">
-							Пожалуйста, введите корректное значение</span
-						>
-					</div>
-					<div class="form__group">
-						<input
-							type="text"
-							class="form__input"
 							id="telegram"
 							name="telegram"
 							required
@@ -1205,51 +1202,6 @@
 						<span class="message__error" id="telegram__error">
 							Пожалуйста, введите корректный никнейм</span
 						>
-					</div>
-					<div class="form__group">
-						<input
-							type="text"
-							class="form__input"
-							id="insta"
-							name="insta"
-							required
-						/>
-						<label for="insta" class="form__label" id="insta__label"
-							>Ник в Instagram</label
-						>
-						<span class="message__error" id="insta__error">
-							Пожалуйста, введите корректный никнейм</span
-						>
-					</div>
-					<div class="form__group">
-						<input
-							type="text"
-							class="form__input"
-							id="niche"
-							name="niche"
-							required
-						/>
-						<label for="niche" class="form__label" id="niche__label"
-							>Ниша</label
-						>
-						<span class="message__error" id="niche__error">
-							Пожалуйста, введите корректное значение</span
-						>
-					</div>
-					<div class="form__group">
-						<input
-							type="text"
-							class="form__input"
-							id="income"
-							name="income"
-							required
-						/>
-						<label for="income" class="form__label" id="income__label"
-							>Доход</label
-						>
-						<span class="message__error" id="income__error">
-							Пожалуйста, введите корректный доход
-						</span>
 					</div>
 					<div class="checkboxs">
 						<div class="involvement">
@@ -1305,7 +1257,12 @@
 									class="checkbox__agree"
 								/>
 								<label for="offer"
-									>Согласен <span>с условиями оферты</span></label
+									>Согласен
+									<a
+										href="https://drive.google.com/file/d/11lMHKePDFvgeKix2ejiL9TEFdcnzGL4-/view"
+										target="_blank"
+										>с условиями оферты</a
+									></label
 								>
 							</div>
 							<div class="checkbox">
@@ -1316,7 +1273,12 @@
 									class="checkbox__agree"
 								/>
 								<label for="personal-date"
-									>Согласен на <span>обработку персональных данных</span></label
+									>Согласен на
+									<a
+										href="https://drive.google.com/file/d/1FrzVRvMGrSd1QEdhJo7Bt2iiNBt0K1gZ/view"
+										target="_blank"
+										>обработку персональных данных</a
+									></label
 								>
 							</div>
 							<div class="checkbox">
@@ -1326,7 +1288,13 @@
 									name="agreement"
 									class="checkbox__agree"
 								/>
-								<label for="distribution">Согласен на рассылку анонсов</label>
+								<label for="distribution"
+									><a
+										href="https://drive.google.com/file/d/1HYQictfSmDy9y9-vAoeKKdB0XmMXa9D_/view"
+										target="_blank"
+										>Согласен на рассылку анонсов</a
+									></label
+								>
 							</div>
 							<span class="message__error"
 								>Пожалуйста, подтвердите согласие</span
@@ -1528,7 +1496,12 @@
 								required
 							/>
 							<label for="agree"
-								>Согласен на <span>обработку персональных данных</span></label
+								>Согласен на
+								<a
+									href="https://drive.google.com/file/d/1FrzVRvMGrSd1QEdhJo7Bt2iiNBt0K1gZ/view"
+									target="_blank"
+									>обработку персональных данных</a
+								></label
 							>
 						</div>
 					</div>

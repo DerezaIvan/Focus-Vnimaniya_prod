@@ -137,8 +137,8 @@
 				message += `<b>Ник в Telegram: </b> ${this.telegram.value}\n`;
 				message += `<b>Ник в Instagram: </b> ${this.insta.value}\n`;
 				message += `<b>Ниша: </b> ${this.niche.value}\n`;
-				message += `<b>публика: </b> ${this.public.value}\n`;
-				message += `<b>Ссылка: </b> ${this.link.value}\n`;
+				message += `<b>Опыт публичных выступлений: </b> ${this.public.value}\n`;
+				message += `<b>Ссылка на видео выступлений: </b> ${this.link.value}\n`;
 
 				axios
 					.post(urlApi, {
