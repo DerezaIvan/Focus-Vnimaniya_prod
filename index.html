@@ -22,7 +22,7 @@
 	</head>
 	<body>
 		<header class="header">
-			<div class="header__container">
+			<div class="container">
 				<div class="header__top">
 					<a href="#"
 						><img class="logo" src="src/images/logo.png" alt="Фокус внимания"
@@ -187,11 +187,10 @@
 								alt="Организаторы Самойлова Екатерина и Крылова Екатерина"
 							/>
 							<img
-								src="src/images/header-image-adaptive.png"
+								src="src/images/header-image-adaptive-768.png"
 								class="header__image-adaptive"
 								alt="Организаторы Самойлова Екатерина и Крылова Екатерина"
 							/>
-
 							<div class="header__content-social-text krilova">
 								<p class="header__content-social-text-title">
 									Крылова Екатерина
@@ -266,7 +265,7 @@
 		</header>
 		<main class="page">
 			<section class="for">
-				<div class="for__container">
+				<div class="container">
 					<h2 class="for__title">Для кого?</h2>
 					<ul class="for__list">
 						<li class="for__list-item">
@@ -310,8 +309,8 @@
 							<p>
 								Для тех, кто хочет
 								<span
-									>заявлять <br />
-									о себе и своем бизнесе</span
+									>заявлять о себе <br />
+									и своем бизнесе</span
 								>
 							</p>
 						</li>
@@ -319,20 +318,8 @@
 				</div>
 			</section>
 			<section class="events" id="events">
-				<div class="events__container">
-					<div class="events__top">
-						<img
-							src="./src/images/events-line-top.png"
-							alt="Жёлтая линия"
-							class="events__top-image"
-						/>
-						<img
-							src="./src/images/events-line-top-adaptive.png"
-							alt="Жёлтая линия"
-							class="events__top-image-adaptive"
-						/>
-						<h2 class="events__top-title">Ближайшие мероприятия</h2>
-					</div>
+				<div class="container">
+					<h2 class="events__top-title">Ближайшие мероприятия</h2>
 					<div class="events__content">
 						<div class="events__desc">
 							<h3 class="events__desc-title">Нетворкинг</h3>
@@ -418,56 +405,47 @@
 							Зарегистрироваться
 						</button>
 					</div>
-					<div class="events__line-bottom">
-						<img
-							class="events__line-bottom-image"
-							src="./src/images/events-line-bot.png"
-							alt="Жёлтая линия"
-						/>
-						<img
-							class="events__line-bottom-adaptive"
-							src="./src/images/events-line-bot-adaptive.png"
-							alt="Жёлтая линия"
-						/>
-					</div>
 					<div class="content">
-						<p class="content__title">
-							отчет <span> по предыдущим</span> мероприятиям в нашем Instagram*
-						</p>
-						<p class="content__text">
-							*Meta признана экстремистcкой организацией в России
-						</p>
-						<a
-							href="https://www.instagram.com/fokus.vnimaniya.club"
-							target="_blank"
-							class="content__link"
-							>Смотреть отчет
-							<svg
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M17.627 23.25H6.37695C3.27533 23.25 0.751953 20.7266 0.751953 17.625V6.375C0.751953 3.27337 3.27533 0.75 6.37695 0.75H17.627C20.7286 0.75 23.252 3.27337 23.252 6.375V17.625C23.252 20.7266 20.7286 23.25 17.627 23.25ZM6.37695 2.625C4.3092 2.625 2.62695 4.30725 2.62695 6.375V17.625C2.62695 19.6927 4.3092 21.375 6.37695 21.375H17.627C19.6947 21.375 21.377 19.6927 21.377 17.625V6.375C21.377 4.30725 19.6947 2.625 17.627 2.625H6.37695Z"
-									fill="#FFCE00"
-								/>
-								<path
-									d="M12.002 17.4375C9.0037 17.4375 6.56445 14.9983 6.56445 12C6.56445 9.00175 9.0037 6.5625 12.002 6.5625C15.0002 6.5625 17.4395 9.00175 17.4395 12C17.4395 14.9983 15.0002 17.4375 12.002 17.4375ZM12.002 8.352C9.99045 8.352 8.35395 9.9885 8.35395 12C8.35395 14.0115 9.99045 15.648 12.002 15.648C14.0135 15.648 15.65 14.0115 15.65 12C15.65 9.9885 14.0135 8.352 12.002 8.352Z"
-									fill="#FFCE00"
-								/>
-								<path
-									d="M18.1885 7.125C18.9134 7.125 19.501 6.53737 19.501 5.8125C19.501 5.08763 18.9134 4.5 18.1885 4.5C17.4636 4.5 16.876 5.08763 16.876 5.8125C16.876 6.53737 17.4636 7.125 18.1885 7.125Z"
-									fill="#FFCE00"
-								/>
-							</svg>
-						</a>
+						<div class="container">
+							<p class="content__title">
+								отчет <span> по предыдущим</span> мероприятиям в нашем
+								Instagram*
+							</p>
+							<p class="content__text">
+								*Meta признана экстремистcкой организацией в России
+							</p>
+							<a
+								href="https://www.instagram.com/fokus.vnimaniya.club"
+								target="_blank"
+								class="content__link"
+								>Смотреть отчет
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M17.627 23.25H6.37695C3.27533 23.25 0.751953 20.7266 0.751953 17.625V6.375C0.751953 3.27337 3.27533 0.75 6.37695 0.75H17.627C20.7286 0.75 23.252 3.27337 23.252 6.375V17.625C23.252 20.7266 20.7286 23.25 17.627 23.25ZM6.37695 2.625C4.3092 2.625 2.62695 4.30725 2.62695 6.375V17.625C2.62695 19.6927 4.3092 21.375 6.37695 21.375H17.627C19.6947 21.375 21.377 19.6927 21.377 17.625V6.375C21.377 4.30725 19.6947 2.625 17.627 2.625H6.37695Z"
+										fill="#FFCE00"
+									/>
+									<path
+										d="M12.002 17.4375C9.0037 17.4375 6.56445 14.9983 6.56445 12C6.56445 9.00175 9.0037 6.5625 12.002 6.5625C15.0002 6.5625 17.4395 9.00175 17.4395 12C17.4395 14.9983 15.0002 17.4375 12.002 17.4375ZM12.002 8.352C9.99045 8.352 8.35395 9.9885 8.35395 12C8.35395 14.0115 9.99045 15.648 12.002 15.648C14.0135 15.648 15.65 14.0115 15.65 12C15.65 9.9885 14.0135 8.352 12.002 8.352Z"
+										fill="#FFCE00"
+									/>
+									<path
+										d="M18.1885 7.125C18.9134 7.125 19.501 6.53737 19.501 5.8125C19.501 5.08763 18.9134 4.5 18.1885 4.5C17.4636 4.5 16.876 5.08763 16.876 5.8125C16.876 6.53737 17.4636 7.125 18.1885 7.125Z"
+										fill="#FFCE00"
+									/>
+								</svg>
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
 			<section class="organizers" id="organizers">
-				<div class="organizers__container">
+				<div class="container">
 					<h2 class="organizers__title">Организаторы</h2>
 					<div class="organizers__info">
 						<div class="organizers__info-content">
@@ -621,6 +599,12 @@
 						<img
 							src="./src/images/organizers-image.png"
 							alt="Екатерины стоят спиной друг к другу"
+							class="organizers__info-image"
+						/>
+						<img
+							src="./src/images/organizers-image-adaptive.png"
+							alt="Екатерины стоят спиной друг к другу"
+							class="organizers__info-image-adaptive"
 						/>
 						<div class="organizers__info-content end">
 							<h3 class="organizers__info-title">Крылова Екатерина</h3>
@@ -813,8 +797,7 @@
 						/>
 						<div class="mission__content-text">
 							<h3 class="mission__content-text-title">
-								Каждое мероприятие <br />
-								— <span>это новые <br />возможности:</span>
+								Каждое мероприятие — <span>это новые возможности:</span>
 							</h3>
 							<ul class="mission__content-text-list">
 								<li class="mission__content-text-list-item">
@@ -868,50 +851,91 @@
 									<p>Найти партнеров/клиентов</p>
 								</li>
 							</ul>
+							<p class="mission__desc">
+								Именно для этого мы и создали сообщество, чтобы
+								<span>объединять сильных и проявленных людей</span>
+							</p>
 						</div>
 					</div>
-					<p class="mission__desc">
-						Именно для этого мы и создали сообщество, чтобы
-						<span>объединять сильных и проявленных людей</span>
-					</p>
 				</div>
 			</section>
 			<section class="rates" id="rates">
-				<div class="rates__container">
+				<div class="container">
 					<h2 class="rates__title">Тарифы</h2>
-					<div class="rates__line">
-						<img
-							class="rates__line-image"
-							src="./src/images/rates-line.png"
-							alt="Линия жёлтая"
-						/>
-						<img
-							class="rates__line-image-adaptive"
-							src="./src/images/rates-line-adaptive.png"
-							alt="Линия жёлтая"
-						/>
-					</div>
 					<div class="rates__cards">
 						<div class="rates__card">
 							<h3 class="rates__card-title">Участник</h3>
 							<ul class="rates__card-list">
-								<li class="rates__card-list-item">Участие в нетворкинге</li>
+								<li class="rates__card-list-item">
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<circle cx="6" cy="6" r="6" fill="#FFCE00" />
+									</svg>
+									Участие в нетворкинге
+								</li>
 							</ul>
 							<p class="rates__card-price">1.000 ₽</p>
 						</div>
 						<div class="rates__card">
 							<h3 class="rates__card-title">1+1</h3>
 							<ul class="rates__card-list">
-								<li class="rates__card-list-item">Участие в нетворкинге</li>
-								<li class="rates__card-list-item">С другом выгоднее</li>
+								<li class="rates__card-list-item">
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<circle cx="6" cy="6" r="6" fill="#FFCE00" />
+									</svg>
+									Участие в нетворкинге
+								</li>
+								<li class="rates__card-list-item">
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<circle cx="6" cy="6" r="6" fill="#FFCE00" />
+									</svg>
+									С другом выгоднее
+								</li>
 							</ul>
 							<p class="rates__card-price">Два билета за 1 500 руб</p>
 						</div>
 						<div class="rates__card">
 							<h3 class="rates__card-title">VIP участник</h3>
 							<ul class="rates__card-list">
-								<li class="rates__card-list-item">Участие в нетворкинге</li>
 								<li class="rates__card-list-item">
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<circle cx="6" cy="6" r="6" fill="#FFCE00" />
+									</svg>
+									Участие в нетворкинге
+								</li>
+								<li class="rates__card-list-item">
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 12 12"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<circle cx="6" cy="6" r="6" fill="#FFCE00" />
+									</svg>
 									Выступление с самопрезентацией <br />
 									на 2-3 минуты с qr-кодом
 								</li>
@@ -926,7 +950,9 @@
 				<div class="rates__btns">
 					<div class="speaker">
 						<h3 class="speaker__title">Стать спикером</h3>
-						<button class="speaker__btn content__link">Заполнить анкету</button>
+						<button class="speaker__btn content__link" id="speaker__btn">
+							Заполнить анкету
+						</button>
 					</div>
 					<div class="partner">
 						<h3 class="partner__title">Стать партнером</h3>
@@ -941,7 +967,7 @@
 				</div>
 			</section>
 			<section class="reviews">
-				<div class="reviews__container">
+				<div class="container">
 					<div class="image-slider swiper-container">
 						<div class="image-slider__wrapper swiper-wrapper">
 							<div class="image-slider__slide swiper-slide">
@@ -957,11 +983,6 @@
 							<div class="swiper-slide">
 								<div class="image-slider__image">
 									<img src="./src/images/reviews/3.jpg" alt="" />
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="image-slider__image">
-									<img src="./src/images/reviews/4.jpg" alt="" />
 								</div>
 							</div>
 							<div class="swiper-slide">
@@ -1036,14 +1057,14 @@
 							</button>
 						</div>
 					</div>
-					<h3 class="reviews__title">отзывы отзывы</h3>
-					<h3 class="reviews__title">тзывы отзывы отзывы от</h3>
-					<h3 class="reviews__title">ы отзывы отзывы</h3>
+					<h3 class="reviews__title">отзывы отзывы отзывы отзывы</h3>
+					<h3 class="reviews__title">отзывы отзывы отзывы отзывы</h3>
+					<h3 class="reviews__title">отзывы отзывы отзывы отзывы</h3>
 				</div>
 			</section>
 		</main>
 		<footer class="footer">
-			<div class="footer__container">
+			<div class="container">
 				<div class="footer__text">
 					<a href="№">Договор оферты </a>
 					<a href="№">Политика обработки данных </a>
@@ -1106,105 +1127,116 @@
 			</div>
 		</footer>
 
-		<div class="form__partner" id="form__popup">
+		<div class="popup" id="popup">
 			<div class="container">
-				<h3 class="form__partner-title" id="form__partner-title">
+				<h3 class="popup__title" id="popup__title">
 					Для регистрации на участие в конференции-нетворкинге заполните анкету
 				</h3>
-				<form class="form__partner-form" id="form__partner-form">
-					<input
-						class="form__partner-form-input"
-						type="text"
-						name="name"
-						placeholder="Имя"
-						id="name"
-						minlength="2"
-						pattern="^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$"
-					/>
-					<span class="message__error"
-						>Пожалуйста, введите корректное значение</span
-					>
-					<input
-						class="form__partner-form-input"
-						type="text"
-						name="last"
-						placeholder="Фамилия"
-						id="last"
-						minlength="2"
-						pattern="^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$"
-					/>
-					<span class="message__error"
-						>Пожалуйста, введите корректное значение</span
-					>
-					<input
-						class="form__partner-form-input"
-						type="number"
-						name="number"
-						id="number"
-						minlength="11"
-						placeholder="Номер телефона"
-					/>
-					<span class="message__error"
-						>Пожалуйста, введите 11-значный номер телефона</span
-					>
-					<input
-						class="form__partner-form-input"
-						type="email"
-						name="email"
-						id="email"
-						placeholder="E-mail"
-					/>
-					<span class="message__error"
-						>Пожалуйста, введите корректный e-mail</span
-					>
-					<input
-						class="form__partner-form-input"
-						type="text"
-						name="telegram"
-						id="telegram"
-						minlength="2"
-						placeholder="Ник в Telegram"
-					/>
-					<span class="message__error"
-						>Пожалуйста, используйте только буквы, цифры и символ
-						подчеркивания</span
-					>
-					<input
-						class="form__partner-form-input"
-						type="text"
-						name="insta"
-						id="insta"
-						minlength="2"
-						placeholder="Ник в Instagram"
-					/>
-					<span class="message__error"
-						>Пожалуйста, используйте только буквы, цифры и символ
-						подчеркивания</span
-					>
-					<input
-						class="form__partner-form-input"
-						type="text"
-						name="niche"
-						id="niche"
-						minlength="2"
-						placeholder="Ниша"
-					/>
-					<span class="message__error"
-						>Пожалуйста, введите корректное значение</span
-					>
-
-					<input
-						class="form__partner-form-input"
-						type="text"
-						name="income"
-						id="income"
-						minlength="3"
-						placeholder="Доход"
-					/>
-					<span class="message__error"
-						>Пожалуйста, введите корректный доход (число с двумя знаками после
-						запятой)</span
-					>
+				<form class="form" id="form">
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="name"
+							name="name"
+							required
+						/>
+						<label for="name" class="form__label">Имя</label>
+						<span class="message__error" id="name__error">
+							Пожалуйста, введите корректное значение</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="last-name"
+							name="lastName"
+							required
+						/>
+						<label for="last-name" class="form__label">Фамилия</label>
+						<span class="message__error" id="last-name__error">
+							Пожалуйста, введите корректное значение</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="phone"
+							name="phone"
+							required
+						/>
+						<label for="phone" class="form__label">Номер телефона</label>
+						<span class="message__error" id="phone__error">
+							Пожалуйста, введите 11-значный номер телефона</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="email"
+							name="email"
+							required
+						/>
+						<label for="email" class="form__label">E-mail</label>
+						<span class="message__error" id="email__error">
+							Пожалуйста, введите корректное значение</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="telegram"
+							name="telegram"
+							required
+						/>
+						<label for="telegram" class="form__label">Ник в Telegram</label>
+						<span class="message__error" id="telegram__error">
+							Пожалуйста, введите корректный никнейм</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="insta"
+							name="insta"
+							required
+						/>
+						<label for="insta" class="form__label">Ник в Instagram</label>
+						<span class="message__error" id="insta__error">
+							Пожалуйста, введите корректный никнейм</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="niche"
+							name="niche"
+							required
+						/>
+						<label for="niche" class="form__label">Ниша</label>
+						<span class="message__error" id="niche__error">
+							Пожалуйста, введите корректное значение</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="income"
+							name="income"
+							required
+						/>
+						<label for="income" class="form__label">Доход</label>
+						<span class="message__error" id="income__error">
+							Пожалуйста, введите корректный доход
+						</span>
+					</div>
 					<div class="checkboxs">
 						<div class="involvement">
 							<div class="checkbox">
@@ -1214,8 +1246,8 @@
 									name="involvement"
 									value="Участник"
 								/>
-								<label for="free"
-									>Участник <br />
+								<label for="free" class="checkbox__label">
+									Участник <br />
 									<span>1.000 ₽</span></label
 								>
 							</div>
@@ -1226,7 +1258,7 @@
 									name="involvement"
 									value="	Участие в нетворкинге с другом"
 								/>
-								<label for="vip">
+								<label for="vip" class="checkbox__label">
 									Участие в нетворкинге с другом
 									<br />
 									<span>1.500 ₽</span>
@@ -1239,7 +1271,7 @@
 									name="involvement"
 									value="VIP участие с самопрезентацией"
 								/>
-								<label for="vip__two">
+								<label for="vip__two" class="checkbox__label">
 									VIP участие с самопрезентацией <br />
 									<span>5.000 ₽</span>
 								</label>
@@ -1252,7 +1284,12 @@
 								Нажимая на кнопку, я подтверждаю, что
 							</p>
 							<div class="checkbox">
-								<input type="checkbox" id="offer" name="offer" />
+								<input
+									type="checkbox"
+									id="offer"
+									name="agreement"
+									class="checkbox__agree"
+								/>
 								<label for="offer"
 									>Согласен <span>с условиями оферты</span></label
 								>
@@ -1261,14 +1298,20 @@
 								<input
 									type="checkbox"
 									id="personal-date"
-									name="personal-date"
+									name="agreement"
+									class="checkbox__agree"
 								/>
 								<label for="personal-date"
 									>Согласен на <span>обработку персональных данных</span></label
 								>
 							</div>
 							<div class="checkbox">
-								<input type="checkbox" id="distribution" name="distribution" />
+								<input
+									type="checkbox"
+									id="distribution"
+									name="agreement"
+									class="checkbox__agree"
+								/>
 								<label for="distribution">Согласен на рассылку анонсов</label>
 							</div>
 							<span class="message__error"
@@ -1276,17 +1319,31 @@
 							>
 						</div>
 					</div>
-					<button class="form__partner-btn btn" type="submit" id="btn-submit">
+					<button
+						class="form__partner-btn btn"
+						type="submit"
+						id="btn-submit"
+						disabled
+					>
 						Зарегистрироваться
 					</button>
+					<button class="close__form" id="close__form">
+						<img src="./src/images/btn-close.png" alt="" />
+					</button>
 				</form>
-				<button class="close__form" id="close__form">
-					<img src="./src/images/btn-close.png" alt="" />
-				</button>
+			</div>
+		</div>
+
+		<div class="application" id="application">
+			<div class="application__container">
+				<h2 class="application__title">
+					Ваша заявка/анкета успешно отправлена!
+				</h2>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="src/script/index.js" type="module"></script>
+		<script src="src/script/form.js"></script>
 	</body>
 </html>

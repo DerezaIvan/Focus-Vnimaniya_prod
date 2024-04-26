@@ -17,6 +17,7 @@ body {
 	margin: 0 auto;
 	background: #0b0b09;
 	color: #2e2e2e;
+	box-sizing: border-box;
 }
 
 a {
@@ -32,12 +33,16 @@ ul {
 	overflow: hidden;
 }
 
+.container {
+	max-width: 1780px;
+	margin: 0 auto;
+}
 /* Стили для Header */
 
 .header {
 	background-image: url("../images/header-bckg.png");
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: 100% 100%;
 	position: relative;
 	overflow: hidden;
 }
@@ -79,7 +84,6 @@ ul {
 	font-weight: 500;
 	font-size: 20px;
 	font-weight: 500;
-	line-height: 24.38px;
 	border-bottom: 3px solid transparent;
 	transition: 0.5s;
 }
@@ -131,10 +135,10 @@ ul {
 }
 
 .header__subtitle {
-	color: #f4db68;
+	color: #ffce00;
 	font-size: 36px;
 	font-weight: 400;
-	line-height: 50.4px;
+	line-height: 1.2;
 	letter-spacing: 0.04em;
 	text-align: left;
 	text-transform: uppercase;
@@ -148,7 +152,7 @@ ul {
 .header__text {
 	font-size: 24px;
 	font-weight: 400;
-	line-height: 33.6px;
+	line-height: 1.2;
 	max-width: 542px;
 	margin: 0 auto;
 	padding-top: 167px;
@@ -162,7 +166,6 @@ ul {
 	font-family: "Prosto One", sans-serif;
 	font-size: 26px;
 	font-weight: 400;
-	line-height: 0.6;
 	text-transform: uppercase;
 	background-color: #ffce00;
 	color: #2e2e2e;
@@ -197,6 +200,10 @@ ul {
 	display: none;
 }
 
+.header__image-adaptive-mobile {
+	display: none;
+}
+
 .header__content-image img {
 	position: relative;
 }
@@ -218,7 +225,7 @@ ul {
 .header__content-social-text-title {
 	font-size: 24px;
 	font-weight: 400;
-	line-height: 33.6px;
+	line-height: 1.2;
 	color: #f4f4f4;
 }
 
@@ -229,7 +236,7 @@ ul {
 	font-family: "Montserrat", sans-serif;
 	font-size: 20px;
 	font-weight: 500;
-	line-height: 24.38px;
+	line-height: 1.2;
 	color: #f4f4f4;
 	padding-top: 7px;
 	transition: 0.5s;
@@ -249,7 +256,7 @@ ul {
 	padding-bottom: 102px;
 }
 
-.for__container {
+.for .container {
 	max-width: 1465px;
 	margin: 0 auto;
 	display: flex;
@@ -260,7 +267,7 @@ ul {
 .for__title {
 	font-size: 113px;
 	font-weight: 400;
-	line-height: 135.6px;
+	line-height: 1.2;
 	text-transform: uppercase;
 	color: #f4f4f4;
 	max-width: 450px;
@@ -278,7 +285,7 @@ ul {
 	font-size: 36px;
 	font-style: italic;
 	font-weight: 400;
-	line-height: 50.4px;
+	line-height: 1.2;
 	text-align: left;
 	text-transform: uppercase;
 	color: #f4f4f4;
@@ -302,46 +309,42 @@ ul {
 
 .events {
 	margin-top: 150px;
-	background-image: url(../images/main-bckg.png);
+	background-image: url(../images/events-bckg.png);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 100%;
+	position: relative;
 }
+
 .events__container {
-	max-width: 1800px;
+	max-width: 1780px;
+	margin: 0 auto;
 }
 .events__top {
 	display: flex;
 }
 
-.events__top-image {
-	position: relative;
-	top: 85px;
-	transform: rotate(-10deg);
-}
-
-.events__top-image-adaptive {
-	display: none;
-}
-
 .events__top-title {
 	font-size: 113px;
 	font-weight: 400;
-	line-height: 135.6px;
+	line-height: 1.2;
 	text-align: left;
 	color: transparent;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: #ffce00;
 	text-transform: uppercase;
-	position: relative;
-	bottom: 100px;
 	max-width: 1168px;
+	position: relative;
+	right: -45%;
+	bottom: -100px;
+	opacity: 0.6;
 }
 
 .events__content {
 	display: flex;
-	align-items: flex-end;
 	justify-content: space-evenly;
-	padding-bottom: 331px;
+	align-items: center;
+	padding-top: 170px;
+	padding-bottom: 330px;
 }
 
 .evets__desc {
@@ -351,7 +354,7 @@ ul {
 .events__desc-title {
 	font-size: 36px;
 	font-weight: 400;
-	line-height: 50.4px;
+	line-height: 1.2;
 	letter-spacing: 0.04em;
 	text-align: left;
 	text-transform: uppercase;
@@ -363,10 +366,10 @@ ul {
 	font-size: 36px;
 	font-style: italic;
 	font-weight: 400;
-	line-height: 50.4px;
+	line-height: 1.2;
 	text-transform: uppercase;
 	color: #f4f4f4;
-	max-width: 549px;
+	max-width: 815px;
 }
 
 .events__desc-date {
@@ -381,36 +384,25 @@ ul {
 	align-items: center;
 	font-size: 24px;
 	font-weight: 400;
-	line-height: 33.6px;
+	line-height: 1.2;
 	text-align: center;
 	color: #f4f4f4;
 }
 
-.events__line-bottom {
-	position: relative;
-	left: 42%;
-	bottom: 10px;
-	max-width: 1000px;
-	transform: rotate(-11deg);
-}
-
-.events__line-bottom-adaptive {
-	display: none;
-}
-
 .content {
-	max-width: 638px;
 	margin-left: 800px;
+	padding-top: 100px;
 }
 
 .content__title {
 	font-size: 36px;
 	font-weight: 400;
-	line-height: 50.4px;
+	line-height: 1.2;
 	letter-spacing: 0.04em;
 	text-align: left;
 	color: #f4f4f4;
 	text-transform: uppercase;
+	max-width: 640px;
 }
 
 .content__title span {
@@ -421,19 +413,21 @@ ul {
 .content__text {
 	font-family: "Montserrat", sans-serif;
 	font-size: 18px;
-	line-height: 25.2px;
+	line-height: 1.2;
 	max-width: 338px;
 	padding-top: 20px;
+	color: #eee8cb;
+	opacity: 0.5;
 }
 
 .content__link {
 	font-size: 26px;
 	font-weight: 400;
-	line-height: 32.11px;
+	line-height: 1.2;
 	text-transform: uppercase;
 	color: #ffce00;
-	margin-top: 90px;
-	margin-bottom: 80px;
+	margin-top: 105px;
+	margin-bottom: 82px;
 	padding-bottom: 20px;
 	display: flex;
 	align-items: center;
@@ -451,19 +445,17 @@ ul {
 	position: relative;
 }
 
-.organizers__container {
+.organizers .container {
 	position: relative;
-	overflow: hidden;
 }
 
 .organizers__title {
 	font-weight: 400;
 	font-size: 113px;
-	line-height: 120%;
+	line-height: 1.2;
 	text-transform: uppercase;
 	color: #f4f4f4;
 	max-width: 1110px;
-	margin-left: 70px;
 }
 
 .organizers__info {
@@ -481,7 +473,7 @@ ul {
 .organizers__info-title {
 	font-weight: 400;
 	font-size: 36px;
-	line-height: 140%;
+	line-height: 1.2;
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
 	color: #f4f4f4;
@@ -509,10 +501,14 @@ ul {
 	font-family: "Montserrat", sans-serif;
 	font-size: 18px;
 	font-weight: 600;
-	line-height: 21.6px;
+	line-height: 1.2;
 	color: #f4f4f4;
 	display: flex;
 	gap: 10px;
+}
+
+.organizers__info-image-adaptive {
+	display: none;
 }
 
 .organizers__info-list-item svg {
@@ -542,8 +538,9 @@ ul {
 	-webkit-text-stroke-color: #ffce00;
 	font-weight: 400;
 	font-size: 113px;
-	line-height: 120%;
+	line-height: 1.2;
 	text-transform: uppercase;
+	opacity: 0.6;
 }
 
 .organizers__titles-title:nth-child(1) {
@@ -578,7 +575,7 @@ ul {
 /* Стили для Mission */
 
 .mission {
-	padding-top: 67px;
+	padding-top: 217px;
 	padding-bottom: 190px;
 }
 
@@ -598,7 +595,7 @@ ul {
 .mission__text-title {
 	font-weight: 400;
 	font-size: 113px;
-	line-height: 120%;
+	line-height: 1.2;
 	text-transform: uppercase;
 	color: #f4f4f4;
 	max-width: 737px;
@@ -607,17 +604,15 @@ ul {
 .mission__text-desc {
 	font-weight: 400;
 	font-size: 36px;
-	line-height: 140%;
+	line-height: 1.2;
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
 	color: #ffce00;
 	max-width: 540px;
 }
-
 .mission__text-desc span {
 	font-weight: 400;
 	font-size: 24px;
-	line-height: 140%;
 	text-transform: none;
 	color: #f4f4f4;
 	padding-top: 22px;
@@ -631,22 +626,23 @@ ul {
 	display: flex;
 	align-items: flex-start;
 	padding-top: 40px;
+	justify-content: space-between;
 }
 
-.mission__content-text {
+.mission__content-text-title {
+	max-width: 500px;
 	font-family: "Montserrat", sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	font-size: 36px;
-	line-height: 140%;
+	line-height: 1.2;
 	text-transform: uppercase;
 	color: #f4f4f4;
-	max-width: 700px;
-	margin-left: 240px;
 }
 
 .mission__content-text-title span {
 	font-style: normal;
+	font-weight: 500;
 }
 
 .mission__content-text-list {
@@ -659,16 +655,17 @@ ul {
 .mission__content-text-list-item {
 	font-weight: 400;
 	font-size: 24px;
-	line-height: 140%;
+	line-height: 1.2;
 	color: #f4f4f4;
 	display: flex;
 	gap: 10px;
+	font-style: normal;
+	text-transform: uppercase;
 }
 
 .mission__content-text-list-item svg {
 	width: 100%;
 	max-width: 20px;
-	/* margin-top: 10px; */
 }
 
 .mission__content-text-list-item::marker {
@@ -679,11 +676,13 @@ ul {
 .mission__desc {
 	font-weight: 400;
 	font-size: 24px;
-	line-height: 140%;
+	line-height: 1.2;
 	color: #f4f4f4;
 	max-width: 709px;
 	align-self: flex-end;
 	padding-top: 77px;
+	font-style: normal;
+	text-transform: none;
 }
 
 .mission__desc span {
@@ -693,35 +692,25 @@ ul {
 /* Стили для Rates */
 
 .rates {
-	padding-top: 144px;
-	height: 1200px;
-	background-image: url(../images/rates-bkcg.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	padding-top: 200px;
 	position: relative;
+	background-image: url(../images/rates-bckg.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.rates .container {
+	padding-bottom: 500px;
 }
 
 .rates__title {
 	font-weight: 400;
 	font-size: 113px;
-	line-height: 120%;
+	line-height: 1.2;
 	text-transform: uppercase;
 	color: #f4f4f4;
 	position: relative;
 	bottom: 120px;
-	margin-left: 51px;
-}
-
-.rates__line {
-	position: absolute;
-	top: 0;
-	right: 33%;
-	transform: rotate(-2deg);
-}
-
-.rates__line-image-adaptive {
-	display: none;
 }
 
 .rates__cards {
@@ -740,7 +729,7 @@ ul {
 .rates__card-title {
 	font-weight: 400;
 	font-size: 36px;
-	line-height: 140%;
+	line-height: 1.2;
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
 	color: #f4f4f4;
@@ -767,15 +756,16 @@ ul {
 	transition: 0.5s;
 }
 
-.rates__card-list-item::marker {
-	font-size: 30px;
-	color: #ffce00;
+.rates__card-list-item {
+	display: flex;
+	gap: 14px;
+	align-items: center;
 }
 
 .rates__card-price {
 	font-weight: 400;
 	font-size: 24px;
-	line-height: 140%;
+	line-height: 1.2;
 	color: #f4f4f4;
 	opacity: 0.5;
 	padding-top: 45px;
@@ -813,7 +803,7 @@ ul {
 .partner__title {
 	font-size: 36px;
 	font-weight: 400;
-	line-height: 50.4px;
+	line-height: 1.2;
 	letter-spacing: 0.04em;
 	text-align: left;
 	text-transform: uppercase;
@@ -825,7 +815,7 @@ ul {
 	font-family: "Prosto One", sans-serif;
 	font-size: 26px;
 	font-weight: 400;
-	line-height: 32.11px;
+	line-height: 1.2;
 	text-align: center;
 	max-width: 369px;
 	background: transparent;
@@ -849,26 +839,34 @@ ul {
 	-webkit-text-stroke-color: #ffce00;
 	font-weight: 400;
 	font-size: 113px;
-	line-height: 120%;
+	line-height: 1.2;
 	text-transform: uppercase;
+	opacity: 0.6;
 }
 
 .reviews__title:nth-of-type(1) {
 	position: absolute;
 	top: 0;
-	right: -5%;
+	right: -99%;
+	width: 3000px;
 }
 
 .reviews__title:nth-of-type(2) {
 	position: absolute;
 	top: 7%;
 	left: -2%;
+	width: 3000px;
 }
 
 .reviews__title:nth-of-type(3) {
 	position: absolute;
-	left: -1%;
-	bottom: 32%;
+	left: -59%;
+	bottom: 31%;
+	width: 3000px;
+}
+
+.reviews__title:nth-of-type(4) {
+	display: none;
 }
 
 /* Slider */
@@ -924,7 +922,7 @@ ul {
 	font-family: "Montserrat", sans-serif;
 }
 
-.footer__container {
+.footer .container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -941,7 +939,7 @@ ul {
 .footer__text a {
 	font-size: 18px;
 	font-weight: 500;
-	line-height: 21.6px;
+	line-height: 1.2;
 	text-decoration: underline;
 }
 
@@ -959,7 +957,7 @@ ul {
 	gap: 32px;
 }
 
-.footer__icon svg {
+.footer__icon svg path {
 	transition: 0.5s;
 	border-radius: 10px;
 }
@@ -967,13 +965,13 @@ ul {
 .footer__content-text {
 	font-size: 13px;
 	font-weight: 500;
-	line-height: 15.6px;
+	line-height: 1.2;
 	text-align: right;
 	color: #d1d1d1;
 	padding-top: 12px;
 }
 
-.form__partner {
+.popup {
 	position: fixed;
 	z-index: -5;
 	top: 0;
@@ -987,13 +985,13 @@ ul {
 	transition: 0.5s;
 }
 
-.form__partner.active {
+.popup.active {
 	opacity: 1;
 	z-index: 5;
 }
 
 /* Стили для модального окна */
-.form__partner .container {
+.popup .container {
 	background-color: #151514;
 	padding: 63px 80px;
 	position: relative;
@@ -1001,41 +999,72 @@ ul {
 	overflow-y: auto;
 }
 
-.form__partner-form {
+.form {
 	display: flex;
 	flex-direction: column;
+	padding-top: 40px;
+	max-width: 476px;
+	gap: 35px;
 }
 
-.form__partner {
+.popup {
 	color: #f4f4f4;
 	background: #151514d6;
 }
 
-.form__partner-title {
+.popup__title {
 	font-size: 24px;
 	font-weight: 400;
-	line-height: 33.6px;
+	line-height: 1.2;
 	text-align: left;
 	max-width: 410px;
 }
-
-.form__partner-form {
-	padding-top: 40px;
-	max-width: 476px;
+.form__group {
+	padding: 10px 20px;
+	gap: 10px;
+	border-bottom: 1px solid #eee8cb;
+	height: 40px;
+	box-sizing: border-box;
+	position: relative;
+	transition: 0.2s ease all;
+	display: flex;
+	flex-direction: column;
 }
 
-.form__partner-form-input {
-	margin-top: 25px;
-	padding: 10px 20px;
+.form__group:focus-within {
+	border-bottom: 1px solid #f9d634;
+}
+
+.form__input {
+	border: 0;
+	outline: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	background: transparent;
 	font-family: "Montserrat", sans-serif;
 	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.2;
+	color: #f9d634;
+}
+
+.form__label {
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
 	font-weight: 500;
 	line-height: 1.2;
-	background-color: transparent;
-	border: none;
-	border-bottom: 1px solid #f4f4f4;
 	color: #eee8cb;
-	transition: 0.5s;
+	position: absolute;
+	left: 23px;
+	top: 10px;
+	opacity: 0.6;
+	transition: 0.2s ease all;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:focus):valid ~ .form__label {
+	top: -12px;
 }
 
 .checkboxs {
@@ -1057,6 +1086,11 @@ ul {
 	font-size: 20px;
 	font-weight: 500;
 	line-height: 1.2;
+}
+
+.checkbox__label span {
+	padding-top: 30px;
+	display: inline-block;
 }
 
 .agreement-checkbox .checkbox label span {
@@ -1083,11 +1117,16 @@ ul {
 	font-family: "Montserrat", sans-serif;
 	font-size: 18px;
 	font-weight: 400;
-	line-height: 21.6px;
+	line-height: 1.2;
 }
 
 .form__partner-btn {
 	margin-top: 60px;
+}
+
+.form__partner-btn:disabled {
+	background-color: #d1d1d1;
+	cursor: not-allowed;
 }
 
 .close__form {
@@ -1101,9 +1140,9 @@ ul {
 
 .message__error {
 	display: none;
-	color: #da1d03;
-	font-size: 16px;
-	padding-top: 10px;
+	color: #8f1c0c;
+	font-size: 14px;
+	padding-top: 5px;
 }
 
 /* Стили для кругов */
@@ -1216,4 +1255,37 @@ ul {
 
 .form__partner-form-input:valid {
 	background: transparent;
+}
+
+.application {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s ease all;
+}
+
+.application.active {
+	display: flex;
+	visibility: visible;
+	opacity: 1;
+}
+
+.application__container {
+	background-color: #2e2e2e;
+	max-width: 700px;
+	padding: 80px;
+	border-radius: 10px;
+}
+
+.application__title {
+	color: #f4f4f4;
+	font-size: 58px;
+	text-align: center;
 }

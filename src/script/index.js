@@ -1,259 +1,331 @@
-// Import functions
 import { initSlider } from "./slider.js";
-function sendFormDataToTelegram(formData) {
+
+(function () {
 	const token = "6538342286:AAHOrzyzSHDUl_Q1qNCjloNBzgeBG9JIGi0";
 	const chatId = "-1002107521234";
 	const urlApi = `https://api.telegram.org/bot${token}/sendMessage`;
 
-	let message = "<b> Привет! У Вас есть новая заявка </b>\n";
-	message += `Информация о пользователе: \n`;
-	message += `<b>Имя: </b> ${formData.get("name")}\n`;
-	message += `<b>Фамилия: </b> ${formData.get("last")}\n`;
-	message += `<b>Номер телефона: </b> ${formData.get("number")}\n`;
-	message += `<b>Электронная почта: </b> ${formData.get("email")}\n`;
-	message += `<b>Ник в Телеграм: </b> ${formData.get("telegram")}\n`;
-	message += `<b>Ник в Инстаграм: </b> ${formData.get("insta")}\n`;
-	message += `<b>Ниша: </b> ${formData.get("niche")}\n`;
-	message += `<b>Доход: </b> ${formData.get("income")}\n`;
-	message += `<b>Тип участия: </b> ${formData.get("involvement")}\n`;
+	document.getElementById("form").addEventListener("submit", function (e) {
+		e.preventDefault();
+		let message = "<b>Привет! У Вас есть новая заявка:</b>\n";
+		message += `<b>Имя: </b> ${this.name.value}\n`;
+		message += `<b>Фамилия: </b> ${this.lastName.value}\n`;
+		message += `<b>Номер телефона: </b> ${this.phone.value}\n`;
+		message += `<b>E-mail: </b> ${this.email.value}\n`;
+		message += `<b>Ник в Telegram: </b> ${this.telegram.value}\n`;
+		message += `<b>Ник в Instagram: </b> ${this.insta.value}\n`;
+		message += `<b>Ниша: </b> ${this.niche.value}\n`;
+		message += `<b>Доход: </b> ${this.income.value}\n`;
 
-	fetch(urlApi, {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify({
-			chat_id: chatId,
-			parse_mode: "html",
-			text: message,
-		}),
-	})
-		.then((response) => {
-			if (!response.ok) {
-				throw new Error("Network response was not ok");
-			}
-			return response.json();
-		})
-		.then((data) => {})
-		.catch((error) => console.error("Error sending message:", error));
-}
+		const involvement = document.querySelector(
+			'input[name="involvement"]:checked'
+		);
+		if (involvement) {
+			message += `<b>Тип участия: </b> ${involvement.value}\n`;
+		} else {
+			message += `<b>Тип участия: </b> не выбран\n`;
+		}
 
-// Class definition
-class App {
-	constructor() {
-		initSlider();
-		this.init();
-	}
-
-	init() {
-		this.popup = document.getElementById("form__popup");
-		this.popupCloseBtn = document.getElementById("close__form");
-		this.btnFormOpen = document.querySelectorAll(".btn-register");
-		this.burgerMenu = document.getElementById("hamburger-menu");
-		this.burgerMenuBtn = document.getElementById("menu__toggle");
-		this.burgerMenuBtnClose = document.getElementById("menu__toggle-close");
-		this.menuItems = document.querySelectorAll(".menu__items-link");
-		this.ratesCards = document.querySelectorAll(".rates__card");
-		this.ratesCardTitles = document.querySelectorAll(".rates__card-title");
-		this.form = document.getElementById("form__partner-form");
-		this.formTitle = document.getElementById("form__partner-title");
-
-		this.modalClose();
-		this.modalOpen();
-		this.burgerMenuOpen();
-		this.burgerMenuClose();
-		this.closeMenuClick();
-		this.ratesCardsClick();
-		this.handleFormSubmit();
-	}
-
-	modalOpen() {
-		this.btnFormOpen.forEach((btn) => {
-			btn.addEventListener("click", () => {
-				this.popup.classList.add("active");
-				document.body.style.overflow = "hidden";
+		axios
+			.post(urlApi, {
+				chat_id: chatId,
+				parse_mode: "html",
+				text: message,
+			})
+			.then(() => {
+				// После успешной отправки формы в телеграм можно закрыть модальное окно
+				const popup = document.getElementById("popup");
+				if (popup) {
+					popup.classList.remove("active");
+				}
+				showApplicationWindow();
+				document.getElementById("form").reset();
+			})
+			.catch((error) => {
+				console.error("Ошибка отправки в телеграм:", error);
+				alert(
+					"Произошла ошибка при отправке заявки. Пожалуйста, попробуйте еще раз."
+				);
 			});
-		});
-	}
+	});
 
-	modalClose() {
-		this.popupCloseBtn.addEventListener("click", () => {
-			this.popup.classList.remove("active");
-			this.form.reset();
+	function showApplicationWindow() {
+		const application = document.getElementById("application");
+		application.classList.add("active");
+
+		setTimeout(() => {
+			application.classList.remove("active");
 			window.location.reload();
-		});
+		}, 2000);
 	}
 
-	burgerMenuOpen() {
-		this.burgerMenuBtn.addEventListener("click", () => {
-			this.burgerMenu.classList.add("active");
-			this.burgerMenuBtnClose.classList.add("active");
-		});
+	// Функция для отправки формы спикера
+	function sendSpeakerForm() {
+		let message = "<b>Привет! У Вас есть новая анкета спикера:</b>\n";
+		message += `<b>Имя: </b> ${this.form.name.value}\n`;
+		message += `<b>Фамилия: </b> ${this.form.lastName.value}\n`;
+		message += `<b>Номер телефона: </b> ${this.form.phone.value}\n`;
+		message += `<b>E-mail: </b> ${this.form.email.value}\n`;
+		message += `<b>Ник в Telegram: </b> ${this.form.telegram.value}\n`;
+		message += `<b>Ник в Instagram: </b> ${this.form.insta.value}\n`;
+		message += `<b>Ниша: </b> ${this.form.niche.value}\n`;
+		message += `<b>Доход: </b> ${this.form.income.value}\n`;
+
+		console.log(message);
+
+		axios
+			.post(urlApi, {
+				chat_id: chatId,
+				parse_mode: "html",
+				text: message,
+			})
+			.then(() => {
+				// После успешной отправки формы в телеграм можно закрыть модальное окно
+				const popup = document.getElementById("popup");
+				if (popup) {
+					popup.classList.remove("active");
+				}
+				showApplicationWindow();
+				document.getElementById("form").reset();
+			})
+			.catch((error) => {
+				console.error("Ошибка отправки в телеграм:", error);
+				alert(
+					"Произошла ошибка при отправке заявки. Пожалуйста, попробуйте еще раз."
+				);
+			});
 	}
 
-	burgerMenuClose() {
-		this.burgerMenuBtnClose.addEventListener("click", () => {
-			this.burgerMenu.classList.remove("active");
-			this.burgerMenuBtnClose.classList.remove("active");
-		});
-	}
+	// Class definition
+	class App {
+		constructor() {
+			this.init();
+		}
 
-	closeMenuClick() {
-		this.menuItems.forEach((item) => {
-			item.addEventListener("click", () => {
+		init() {
+			initSlider();
+			this.popup = document.getElementById("popup");
+			this.popupCloseBtn = document.getElementById("close__form");
+			this.btnFormOpen = document.querySelectorAll(".btn-register");
+			this.burgerMenu = document.getElementById("hamburger-menu");
+			this.burgerMenuBtn = document.getElementById("menu__toggle");
+			this.burgerMenuBtnClose = document.getElementById("menu__toggle-close");
+			this.menuItems = document.querySelectorAll(".menu__items-link");
+			this.ratesCardTitles = document.querySelectorAll(".rates__card-title");
+			this.form = document.getElementById("form");
+			this.formTitle = document.getElementById("popup__title");
+			this.speakerBtn = document.getElementById("speaker__btn");
+
+			this.modalClose();
+			this.modalOpenBtnRegister();
+			this.burgerMenuOpen();
+			this.burgerMenuClose();
+			this.closeMenuClick();
+			this.ratesCardsClick();
+			this.speakerForm();
+		}
+
+		modalOpen() {
+			this.popup.classList.add("active");
+			document.body.style.overflow = "hidden";
+		}
+
+		modalOpenBtnRegister() {
+			this.btnFormOpen.forEach((btn) => {
+				btn.addEventListener("click", () => {
+					this.modalOpen();
+				});
+			});
+		}
+
+		modalClose() {
+			this.popupCloseBtn.addEventListener("click", () => {
+				this.popup.classList.remove("active");
+				this.form.reset();
+				window.location.reload();
+			});
+		}
+
+		burgerMenuOpen() {
+			this.burgerMenuBtn.addEventListener("click", () => {
+				this.burgerMenu.classList.add("active");
+				this.burgerMenuBtnClose.classList.add("active");
+			});
+		}
+
+		burgerMenuClose() {
+			this.burgerMenuBtnClose.addEventListener("click", () => {
 				this.burgerMenu.classList.remove("active");
 				this.burgerMenuBtnClose.classList.remove("active");
 			});
-		});
-	}
+		}
 
-	ratesCardsClick() {
-		this.ratesCardTitles.forEach((title) => {
-			title.addEventListener("click", () => {
-				const card = title.closest(".rates__card");
-				card.classList.toggle("active");
+		closeMenuClick() {
+			this.menuItems.forEach((item) => {
+				item.addEventListener("click", () => {
+					this.burgerMenu.classList.remove("active");
+					this.burgerMenuBtnClose.classList.remove("active");
+				});
 			});
-		});
-	}
+		}
 
-	handleFormSubmit() {
-		this.form.addEventListener("submit", (e) => {
-			e.preventDefault();
+		ratesCardsClick() {
+			this.ratesCardTitles.forEach((title) => {
+				title.addEventListener("click", () => {
+					const card = title.closest(".rates__card");
+					card.classList.toggle("active");
+				});
+			});
+		}
 
-			// Проверка формы перед отправкой
-			if (this.validateForm()) {
-				const formData = new FormData(this.form);
-				sendFormDataToTelegram(formData);
+		speakerForm() {
+			this.speakerBtn.addEventListener("click", () => {
+				const checkboxContainer = document.querySelector(".involvement");
+				checkboxContainer.style.display = "none";
+				this.modalOpen();
+				this.formTitle.textContent = "Анкета спикера";
 
-				this.form.style.display = "none";
-				this.popup.querySelector(".container").style.height = "300px";
-				this.formTitle.textContent =
-					"Спасибо за Вашу заявку, мы свяжемся с Вами в ближайшее время!";
-				setTimeout(() => {
-					this.popup.classList.remove("active");
-					this.form.reset();
-					window.location.reload();
-				}, 3000);
-			} else {
-				alert("Заполните пожалуйста все поля");
-			}
-		});
-	}
+				const speakerInputs = [
+					{ label: "Имя", name: "name", pattern: "^[+0-9()-]+$" },
+					{
+						label: "Фамилия",
+						name: "lastName",
+						pattern: "^[a-zA-Zа-яА-ЯЁё0-9\\s,.:;-]+$",
+					},
+					{ label: "Номер телефона", name: "phone", pattern: "^[+0-9()-]+$" },
+					{
+						label: "Ник в Telegram",
+						name: "telegram",
+						pattern: "^[a-zA-Z0-9_]+$",
+					},
+					{
+						label: "Ссылка на Instagram",
+						name: "insta",
+						pattern: "^[a-zA-Z0-9_]+$",
+					},
+					{
+						label: "Экспертность. Ниша, опыт работы, кейсы",
+						name: "niche",
+						pattern: "^[a-zA-Zа-яА-ЯЁё0-9\\s,.:;-]+$",
+					},
+					{
+						label: "Опыт публичных выступлений",
+						name: "experience",
+						pattern: "^[a-zA-Zа-яА-ЯЁё0-9\\s,.:;-]+$",
+					},
+					{
+						label: "Ссылка на видео выступлений",
+						name: "videoLink",
+						pattern: '^(http|https):\\/\\/[^ "]+$',
+					},
+				];
 
-	validateForm() {
-		// Получаем все обязательные поля формы
-		const inputs = this.form.querySelectorAll(".form__partner-form-input");
+				const formGroups = document.querySelectorAll(".form__group");
+				formGroups.forEach((group, index) => {
+					const input = document.createElement("input");
+					input.type = "text";
+					input.classList.add("form__input");
+					input.id = input.name = speakerInputs[index].name;
+					input.required = true;
+					input.pattern = speakerInputs[index].pattern;
 
-		// Регулярные выражения для валидации
-		const regexPatterns = {
-			name: /^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/,
-			last: /^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/,
-			email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-			phone: /^\d{11}$/,
-			telegram: /^[A-Za-z\d_]{5,32}$/,
-			instagram: /^[a-zA-Z0-9_.]{1,30}$/,
-			income: /^\d+(\.\d{2})?$/,
-		};
+					const label = document.createElement("label");
+					label.htmlFor = input.id;
+					label.classList.add("form__label");
+					label.textContent = speakerInputs[index].label;
 
-		let allValid = true; // Флаг для обозначения общей валидности формы
+					const error = document.createElement("span");
+					error.classList.add("message__error");
+					error.id = input.id + "__error";
+					error.textContent = `Пожалуйста, введите корректное значение`;
 
-		const markAsInvalid = (input) => {
-			input.classList.add("invalid");
-			allValid = false;
-		};
+					group.innerHTML = "";
+					group.appendChild(input);
+					group.appendChild(label);
+					group.appendChild(error);
+				});
 
-		// Функция для удаления класса invalid
-		const markAsValid = (input) => {
-			input.classList.remove("invalid");
-		};
+				const formSubtitle = document.createElement("p");
+				formSubtitle.classList.add("form__subtitle");
+				formSubtitle.innerHTML = `
+					Дорогой спикер, благодарим тебя за желание выступать на наших мероприятиях. 
+					Заполни форму максимально подробно и честно, прикрепляя ссылки на свои прошлые выступления. 
+					Если опыта нет, это тоже не страшно, пиши честно свой текущий опыт, 
+					у нас предусмотрены разные пакеты участия.
+		
+					На каждое мероприятие мы получаем огромное количество заявок и очень тщательно формируем спикерский состав, 
+					мы свяжемся с вами в порядке очереди. Если с вами не связались, не расстраивайтесь, 
+					к сожалению, количество спикеров каждом мероприятии ограничено, 
+					но мы всех вносим в базу спикеров и свяжемся с вами в следующий раз.
+				`;
+				this.form.insertBefore(formSubtitle, this.form.firstChild);
 
-		// Добавляем обработчик события input для каждого поля ввода
-		inputs.forEach((input) => {
-			const value = input.value.trim();
-			const fieldName = input.getAttribute("name");
-			const regex = regexPatterns[fieldName];
-			const errorSpan = input.nextElementSibling;
+				const involvementGroup = document.querySelector(".involvement");
+				involvementGroup.insertAdjacentHTML(
+					"beforeend",
+					`
+					<span class="message__error">Пожалуйста, выберите тип участия</span>
+					`
+				);
 
-			// Если значение пустое, помечаем поле как невалидное и пропускаем проверку регулярным выражением
-			if (value === "") {
-				markAsInvalid(input);
-				errorSpan.style.display = "block";
-			} else {
-				// Если значение не пустое, проверяем его на соответствие регулярному выражению
-				if (!regex.test(value)) {
-					markAsInvalid(input);
-					errorSpan.style.display = "block";
-				} else {
-					markAsValid(input);
-					errorSpan.style.display = "none";
+				const agreementGroup = document.querySelector(".agreement-checkbox");
+				agreementGroup.innerHTML = `
+					<div class="checkbox">
+						<input
+							type="checkbox"
+							id="agreement"
+							name="agreement"
+							class="checkbox__agree"
+							required
+						/>
+						<label for="agreement">Согласен на обработку персональных данных</label>
+					</div>
+				`;
+
+				const submitBtn = document.getElementById("btn-submit");
+				submitBtn.textContent = "Отправить заявку";
+
+				const formInputs = this.form.querySelectorAll(
+					"input:not([type='submit']), textarea"
+				);
+				formInputs.forEach((input) => {
+					input.addEventListener("input", () => {
+						this.validateFormSpeaker();
+					});
+				});
+
+				// Добавляем обработчик события на кнопку отправки
+				submitBtn.addEventListener("click", sendSpeakerForm.bind(this));
+			});
+		}
+
+		validateFormSpeaker() {
+			const formInputs = this.form.querySelectorAll(
+				"input:not([type='submit']), textarea, input[type='checkbox']"
+			);
+			let isFormValid = true;
+
+			formInputs.forEach((input) => {
+				// Если поле обязательное, проверяем его наличие и валидность
+				if (input.hasAttribute("required")) {
+					if (input.type === "checkbox") {
+						if (!input.checked) {
+							isFormValid = false;
+						}
+					} else {
+						if (!input.value.trim()) {
+							isFormValid = false;
+						}
+					}
 				}
-			}
-		});
+			});
 
-		// Проверка выбора типа участия
-		const involvementFields = this.form.querySelectorAll(
-			"[name='involvement']"
-		);
-		let involvementChecked = false;
-		for (const field of involvementFields) {
-			if (field.checked) {
-				involvementChecked = true;
-				break;
-			}
+			// Разблокируем кнопку отправки в зависимости от валидности формы
+			const submitBtn = document.getElementById("btn-submit");
+			submitBtn.disabled = !isFormValid;
 		}
-		if (!involvementChecked) {
-			const errorMessage = this.form.querySelector(
-				".checkboxs .message__error"
-			);
-			if (errorMessage) {
-				errorMessage.textContent = "Пожалуйста, выберите тип участия";
-				errorMessage.style.display = "block";
-			}
-			allValid = false;
-		} else {
-			const errorMessage = this.form.querySelector(
-				".checkboxs .message__error"
-			);
-			if (errorMessage) {
-				errorMessage.textContent = "";
-				errorMessage.style.display = "none";
-			}
-		}
-
-		// Проверка согласия с условиями
-		const agreementFields = this.form.querySelectorAll(
-			"[name='offer'], [name='personal-date'], [name='distribution']"
-		);
-		let agreementChecked = true;
-		for (const field of agreementFields) {
-			if (!field.checked) {
-				agreementChecked = false;
-				break;
-			}
-		}
-		if (!agreementChecked) {
-			const errorMessage = this.form.querySelector(
-				".agreement-checkbox .message__error"
-			);
-			if (errorMessage) {
-				errorMessage.textContent = "Пожалуйста, подтвердите согласие";
-				errorMessage.style.display = "block";
-			}
-			allValid = false;
-		} else {
-			const errorMessage = this.form.querySelector(
-				".agreement-checkbox .message__error"
-			);
-			if (errorMessage) {
-				errorMessage.textContent = "";
-				errorMessage.style.display = "none";
-			}
-		}
-
-		// Возвращаем общую валидность формы
-		return allValid;
 	}
-}
 
-// Initialize the App
-new App();
+	// Initialize the App
+	new App();
+})();

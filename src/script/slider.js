@@ -17,7 +17,7 @@ export function initSlider() {
 		// активный слайд по центру
 		centeredSlides: true,
 		// стартовый слайд
-		initialSlide: 6,
+		initialSlide: 5,
 		// бесконечный слайдер
 		loop: true,
 		// адаптивные слайды
