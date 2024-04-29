@@ -1182,6 +1182,11 @@
 		flex-direction: column;
 	}
 
+	.rates__card {
+		padding-bottom: 15px;
+		border-bottom: 1px solid #f4f4f496;
+	}
+
 	.rates__card-text {
 		display: flex;
 		justify-content: space-between;
@@ -1211,10 +1216,7 @@
 		font-size: 15px;
 		padding-top: 0;
 		max-width: 110px;
-	}
-
-	.rates__card.active {
-		display: block;
+		text-align: end;
 	}
 
 	.rates__card.active .rates__card-list {

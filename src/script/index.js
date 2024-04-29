@@ -21,7 +21,7 @@ import { initSlider } from "./slider.js";
 			this.burgerMenuBtn = document.getElementById("menu__toggle");
 			this.burgerMenuBtnClose = document.getElementById("menu__toggle-close");
 			this.menuItems = document.querySelectorAll(".menu__items-link");
-			this.ratesCard = document.querySelectorAll(".rates__card");
+			this.ratesCard = document.querySelectorAll(".rates__card-adaptive");
 			this.form = document.getElementById("form");
 			this.formSpeaker = document.getElementById("form__speaker");
 			this.formTitle = document.getElementById("popup__title");
@@ -102,22 +102,17 @@ import { initSlider } from "./slider.js";
 		}
 
 		ratesCardsClick() {
-			this.ratesCard.forEach((title, index) => {
-				title.addEventListener("click", () => {
-					const card = title.closest(".rates__card");
+			// Устанавливаем активный класс для первого элемента
+			const firstCard = this.ratesCard[0].closest(".rates__card-adaptive");
+			firstCard.classList.add("active");
+
+			this.ratesCard.forEach((item) => {
+				item.addEventListener("click", () => {
 					this.ratesCard.forEach((card) => {
 						card.classList.remove("active");
 					});
-					if (!card.classList.contains("active")) {
-						card.classList.add("active");
-					} else {
-						card.classList.remove("active");
-					}
+					item.classList.add("active");
 				});
-				if (index === 0) {
-					const firstCard = title.closest(".rates__card");
-					firstCard.classList.add("active");
-				}
 			});
 		}
 	}

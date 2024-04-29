@@ -731,6 +731,10 @@ ul {
 	transition: 0.5s;
 }
 
+.rates__cards.adaptive {
+	display: none;
+}
+
 .rates__card-title {
 	font-weight: 400;
 	font-size: 36px;
