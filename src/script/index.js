@@ -105,24 +105,15 @@ import { initSlider } from "./slider.js";
 			this.ratesCard.forEach((title, index) => {
 				title.addEventListener("click", () => {
 					const card = title.closest(".rates__card");
-
-					// Убираем активный класс у всех элементов
 					this.ratesCard.forEach((card) => {
 						card.classList.remove("active");
 					});
-
-					// Добавляем активный класс к текущему элементу, если его не было
 					if (!card.classList.contains("active")) {
 						card.classList.add("active");
-					}
-
-					// Убираем активный класс, если он уже был у текущего элемента
-					else {
+					} else {
 						card.classList.remove("active");
 					}
 				});
-
-				// Если это первый элемент, добавляем ему класс "active"
 				if (index === 0) {
 					const firstCard = title.closest(".rates__card");
 					firstCard.classList.add("active");
