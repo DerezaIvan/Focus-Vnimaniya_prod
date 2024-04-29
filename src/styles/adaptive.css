@@ -409,6 +409,10 @@
 		max-width: 720px;
 	}
 
+	.logo {
+		max-width: 50px;
+	}
+
 	.menu {
 		display: none;
 	}
@@ -578,8 +582,7 @@
 		padding-bottom: 150px;
 	}
 
-	.events__desc-title,
-	.events__desc-text {
+	.events__desc-title {
 		font-size: 22px;
 		line-height: 1.2;
 	}
@@ -919,7 +922,7 @@
 
 	.samoilova {
 		top: 35%;
-		right: 38%;
+		right: 44%;
 		z-index: 5;
 	}
 
@@ -936,6 +939,7 @@
 
 	.header__content-social-text-link {
 		font-size: 11px;
+		gap: 5px;
 	}
 
 	.for {
@@ -1004,6 +1008,10 @@
 
 	.events-btn {
 		margin-top: 140px;
+	}
+
+	.events__desc-text {
+		max-width: 85%;
 	}
 
 	.content {
@@ -1106,7 +1114,7 @@
 	.organizers-line-left {
 		display: block;
 		position: absolute;
-		top: 28%;
+		top: 36%;
 		left: 12%;
 	}
 
@@ -1162,8 +1170,7 @@
 
 	.mission__desc {
 		font-size: 15px;
-		max-width: 237px;
-		margin-left: auto;
+		max-width: 335px;
 	}
 
 	.rates__cards {
@@ -1198,6 +1205,7 @@
 	.rates__card-price {
 		font-size: 15px;
 		padding-top: 0;
+		max-width: 110px;
 	}
 
 	.rates__card.active {
