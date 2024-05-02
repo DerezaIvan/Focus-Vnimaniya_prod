@@ -34,7 +34,7 @@
 				id: "telegram-speaker",
 				element: null,
 				errorElement: null,
-				regex: /^[A-Za-z\d_]{5,32}$/,
+				regex: /^[A-Za-z\d_@]{5,32}$/,
 				valid: false,
 				labelElement: null,
 			},

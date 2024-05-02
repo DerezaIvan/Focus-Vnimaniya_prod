@@ -1273,7 +1273,7 @@ ul {
 }
 
 .checkbox input[type="checkbox"]:checked + label:after {
-	content: "\2713";
+	content: "\2714";
 	font-size: 18px;
 	font-weight: 500;
 	color: #ffffff;

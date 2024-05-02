@@ -1157,14 +1157,10 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__text">
-					<a
-						href="https://drive.google.com/file/d/11lMHKePDFvgeKix2ejiL9TEFdcnzGL4-/view"
-						target="_blank"
+					<a href="/src/docs/Оферта.docx.pdf" target="_blank"
 						>Договор оферты
 					</a>
-					<a
-						href="https://drive.google.com/file/d/1FrzVRvMGrSd1QEdhJo7Bt2iiNBt0K1gZ/view"
-						target="_blank"
+					<a href="/src/docs/Политика_ПП.docx.pdf" target="_blank"
 						>Политика обработки данных
 					</a>
 				</div>
@@ -1282,11 +1278,27 @@
 							id="telegram"
 							name="telegram"
 							required
+							value="@"
 						/>
-						<label for="telegram" class="form__label" id="telegtam__label"
+						<label for="telegram" class="form__label" id="telegram__label"
 							>Ник в Telegram</label
 						>
 						<span class="message__error" id="telegram__error">
+							Пожалуйста, введите корректный никнейм</span
+						>
+					</div>
+					<div class="form__group">
+						<input
+							type="text"
+							class="form__input"
+							id="niche"
+							name="niche"
+							required
+						/>
+						<label for="niche" class="form__label" id="telegtam__label"
+							>Ниша</label
+						>
+						<span class="message__error" id="niche__error">
 							Пожалуйста, введите корректный никнейм</span
 						>
 					</div>
@@ -1305,14 +1317,9 @@
 								>
 							</div>
 							<div class="checkbox">
-								<input
-									type="radio"
-									id="vip"
-									name="involvement"
-									value="	Участие в нетворкинге с другом"
-								/>
+								<input type="radio" id="vip" name="involvement" value="1 + 1" />
 								<label for="vip" class="checkbox__label">
-									Участие в нетворкинге с другом
+									1 + 1
 									<br />
 									<span>1.500 ₽</span>
 								</label>
@@ -1345,9 +1352,7 @@
 								/>
 								<label for="offer"
 									>Согласен
-									<a
-										href="https://drive.google.com/file/d/11lMHKePDFvgeKix2ejiL9TEFdcnzGL4-/view"
-										target="_blank"
+									<a href="/src/docs/Оферта.docx.pdf" target="_blank"
 										>с условиями оферты</a
 									></label
 								>
@@ -1361,9 +1366,7 @@
 								/>
 								<label for="personal-date"
 									>Согласен на
-									<a
-										href="https://drive.google.com/file/d/1FrzVRvMGrSd1QEdhJo7Bt2iiNBt0K1gZ/view"
-										target="_blank"
+									<a href="/src/docs/Политика_ПП.docx.pdf" target="_blank"
 										>обработку персональных данных</a
 									></label
 								>
@@ -1377,7 +1380,7 @@
 								/>
 								<label for="distribution"
 									><a
-										href="https://drive.google.com/file/d/1HYQictfSmDy9y9-vAoeKKdB0XmMXa9D_/view"
+										href="/src/docs/рассылка_согласие.docx.pdf"
 										target="_blank"
 										>Согласен на рассылку анонсов</a
 									></label
@@ -1483,6 +1486,7 @@
 							class="form__input"
 							id="telegram-speaker"
 							name="telegram"
+							value="@"
 							required
 						/>
 						<label
@@ -1584,10 +1588,8 @@
 							/>
 							<label for="agree"
 								>Согласен на
-								<a
-									href="https://drive.google.com/file/d/1FrzVRvMGrSd1QEdhJo7Bt2iiNBt0K1gZ/view"
-									target="_blank"
-									>обработку персональных данных</a
+								<a href="/src/docs/Политика_ПП.docx.pdf" target="_blank">
+									обработку персональных данных</a
 								></label
 							>
 						</div>
